@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>02 首页 · 智慧园区</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="screen">
+  <!-- 渐变头部 -->
+  <div class="bg-gradient-to-br from-indigo-600 via-indigo-600 to-violet-500 text-white pb-20 flex-shrink-0">
+    <div class="statusbar text-white"><span>9:41</span><span class="space-x-1.5"><i class="fa-solid fa-signal text-xs"></i><i class="fa-solid fa-wifi text-xs"></i><i class="fa-solid fa-battery-three-quarters text-sm"></i></span></div>
+    <div class="navbar">
+      <div class="min-w-0">
+        <div class="text-lg font-bold truncate">晨阳精密制造有限公司</div>
+        <div class="text-[11px] text-indigo-200 font-normal mt-0.5">欢迎回到 智汇·科创园</div>
+      </div>
+      <div class="flex gap-2.5">
+        <div class="relative w-9 h-9 rounded-full bg-white/15 flex items-center justify-center"><i class="fa-regular fa-bell"></i><span class="absolute top-1.5 right-2 w-2 h-2 bg-rose-400 rounded-full"></span></div>
+        <div class="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center"><i class="fa-solid fa-qrcode"></i></div>
+      </div>
+    </div>
+    <div class="mx-4 mt-3 h-10 rounded-xl bg-white/15 flex items-center px-4 gap-2 text-indigo-100 text-sm"><i class="fa-solid fa-magnifying-glass text-xs"></i>搜索服务、账单、公告…</div>
+  </div>
+  <div class="scroll hsb px-4 -mt-14 pb-4 relative z-10">
+    <!-- 待缴账单 -->
+    <div class="card p-4">
+      <div class="flex items-center gap-3">
+        <div class="itile bg-amber-50 text-amber-500"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <div class="flex-1">
+          <div class="text-xs text-slate-500">本月待缴账单（4 笔）</div>
+          <div class="text-[22px] font-bold mt-0.5">¥12,860.00</div>
+        </div>
+        <a href="billing.html" class="btn h-9 px-4 bg-indigo-600 text-white text-xs rounded-full">去缴纳</a>
+      </div>
+      <div class="mt-3 pt-3 border-t border-slate-100 flex gap-4 text-[11px] text-slate-500">
+        <span><i class="fa-regular fa-clock text-indigo-400 mr-1"></i>最近到期 09-05</span>
+        <span><i class="fa-brands fa-weixin text-emerald-500 mr-1"></i>支持小程序在线支付</span>
+      </div>
+    </div>
+    <!-- 快捷服务 -->
+    <div class="card p-4 mt-3.5">
+      <div class="flex items-center justify-between"><div class="font-bold text-[15px]">快捷服务</div><i class="fa-solid fa-ellipsis text-slate-300"></i></div>
+      <div class="grid grid-cols-4 gap-y-5 mt-4 text-center">
+        <a href="billing.html"><div class="itile mx-auto bg-indigo-50 text-indigo-500"><i class="fa-solid fa-file-invoice-dollar"></i></div><div class="text-xs mt-1.5 text-slate-600">账单缴费</div></a>
+        <a href="contract.html"><div class="itile mx-auto bg-violet-50 text-violet-500 relative"><i class="fa-solid fa-file-signature"></i><span class="absolute -top-1 -right-1 chip bg-rose-500 text-white !px-1.5">1</span></div><div class="text-xs mt-1.5 text-slate-600">合同管理</div></a>
+        <a href="utility.html"><div class="itile mx-auto bg-sky-50 text-sky-500"><i class="fa-solid fa-bolt"></i></div><div class="text-xs mt-1.5 text-slate-600">水电用量</div></a>
+        <a href="repair.html"><div class="itile mx-auto bg-orange-50 text-orange-500"><i class="fa-solid fa-screwdriver-wrench"></i></div><div class="text-xs mt-1.5 text-slate-600">报修服务</div></a>
+        <a href="invoice.html"><div class="itile mx-auto bg-rose-50 text-rose-500 relative"><i class="fa-solid fa-file-lines"></i><span class="absolute -top-1 -right-1 chip bg-rose-500 text-white !px-1.5">1</span></div><div class="text-xs mt-1.5 text-slate-600">发票申请</div></a>
+        <a href="notice.html"><div class="itile mx-auto bg-amber-50 text-amber-500"><i class="fa-solid fa-bullhorn"></i></div><div class="text-xs mt-1.5 text-slate-600">园区公告</div></a>
+      </div>
+    </div>
+    <!-- 我的厂房 -->
+    <div class="card overflow-hidden mt-3.5">
+      <div class="h-28 relative">
+        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=750&q=80" class="w-full h-full object-cover" alt="厂房">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <span class="chip bg-emerald-500/90 text-white absolute top-2.5 right-3">履行中</span>
+        <div class="absolute bottom-2.5 left-3 text-white text-sm font-bold">A3栋 · 2F-201 智能厂房</div>
+      </div>
+      <div class="p-3.5 flex items-center justify-between text-xs text-slate-500">
+        <span>260㎡ · ¥35/㎡/月</span><span>租期至 2026-09-30</span>
+        <a href="contract-detail.html" class="text-indigo-600 font-semibold">查看合同 <i class="fa-solid fa-angle-right"></i></a>
+      </div>
+    </div>
+    <!-- 园区公告 -->
+    <div class="card p-4 mt-3.5">
+      <div class="flex items-center gap-2"><div class="font-bold text-[15px]">园区公告</div><span class="chip bg-rose-50 text-rose-500">NEW</span><span class="ml-auto text-xs text-slate-400">全部 <i class="fa-solid fa-angle-right"></i></span></div>
+      <div class="mt-3 space-y-3">
+        <div class="flex gap-2.5 items-start"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5 flex-shrink-0"></span><div class="flex-1 min-w-0"><p class="text-sm text-slate-700 truncate">中秋国庆双节园区车辆通行安排的通知</p><p class="text-[11px] text-slate-400 mt-1">09-01 · 园区运营中心</p></div></div>
+        <div class="flex gap-2.5 items-start"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5 flex-shrink-0"></span><div class="flex-1 min-w-0"><p class="text-sm text-slate-700 truncate">关于 9 月消防设施年度检测的公告</p><p class="text-[11px] text-slate-400 mt-1">08-28 · 安保部</p></div></div>
+      </div>
+    </div>
+  </div>
+  <!-- 底部导航 -->
+  <div class="tabbar">
+    <a class="t-item active" href="home.html"><i class="fa-solid fa-house"></i>首页</a>
+    <a class="t-item" href="assets.html"><i class="fa-regular fa-building"></i>空间</a>
+    <a class="t-item" href="repair.html"><i class="fa-solid fa-screwdriver-wrench"></i>服务</a>
+    <a class="t-item" href="me.html"><i class="fa-regular fa-user"></i>我的</a>
+  </div>
+</div>
+</body>
+</html>

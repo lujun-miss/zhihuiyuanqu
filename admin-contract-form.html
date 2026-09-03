@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>新建合同 · 智慧园区管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body class="web">
+  <aside class="sidebar">
+    <div class="s-logo">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm"><i class="fa-solid fa-industry"></i></div>
+      <div><div class="text-white font-bold text-[15px]">智汇·科创园</div><div class="text-[10px] text-slate-500 mt-0.5">园区运营管理端</div></div>
+    </div>
+    <nav class="mt-1">
+      <div class="s-cat">总览</div>
+      <a class="s-link" href="admin-dashboard.html"><i class="fa-solid fa-gauge-high"></i>运营驾驶舱</a>
+      <div class="s-cat">资产管理</div>
+      <a class="s-link" href="admin-space.html"><i class="fa-regular fa-building"></i>房源资产</a>
+      <a class="s-link active" href="admin-contracts.html"><i class="fa-solid fa-file-signature"></i>合同中心</a>
+      <div class="s-cat">经营管理</div>
+      <a class="s-link" href="admin-billing.html"><i class="fa-solid fa-coins"></i>收租管理</a>
+      <a class="s-link" href="admin-meter-manage.html"><i class="fa-solid fa-bolt"></i>水电表管理</a>
+      <a class="s-link" href="admin-meter.html"><i class="fa-regular fa-clipboard"></i>抄表录入</a>
+      <a class="s-link" href="admin-invoice.html"><i class="fa-solid fa-file-invoice"></i>发票管理</a>
+      <div class="s-cat">服务管理</div>
+      <a class="s-link" href="admin-workorder.html"><i class="fa-solid fa-clipboard-list"></i>工单管理</a>
+      <a class="s-link" href="admin-tenants.html"><i class="fa-solid fa-users"></i>企业档案</a>
+      <a class="s-link" href="admin-notice.html"><i class="fa-solid fa-bullhorn"></i>公告管理</a>
+    </nav>
+    <div class="s-foot"><i class="fa-regular fa-circle-question mr-1"></i>帮助中心 · v2.4.0</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <a href="admin-contracts.html" class="btn h-9 px-3.5 border border-slate-200 text-slate-600 text-xs rounded-lg"><i class="fa-solid fa-angle-left mr-1"></i>返回</a>
+      <div class="ml-4"><div class="font-bold text-[16px] text-slate-800">新建租赁合同</div><div class="text-[11px] text-slate-400 mt-0.5">电子合同 · 在线签署 · 自动生成账单计划</div></div>
+      <div class="ml-auto flex items-center gap-2.5">
+        <div class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg">保存草稿</div>
+        <div class="btn h-9 px-4 bg-indigo-600 text-white text-xs rounded-lg">提交审批</div>
+      </div>
+    </header>
+    <div class="content max-w-3xl">
+      <form class="wcard p-6 space-y-5">
+        <div>
+          <div class="font-bold text-slate-800 mb-4 text-sm"><i class="fa-solid fa-user-tie text-indigo-500 mr-1.5"></i>承租方信息</div>
+          <div class="grid grid-cols-2 gap-4">
+            <div><label class="lbl">承租企业</label><select class="inp"><option>晨阳精密制造有限公司</option><option>蓝湾生物科技</option><option>星驰机器人</option></select></div>
+            <div><label class="lbl">统一社会信用代码</label><input class="inp bg-slate-50" value="91320105MA2X8K7Q1D" readonly></div>
+            <div><label class="lbl">法定代表人</label><input class="inp" value="李明远"></div>
+            <div><label class="lbl">联系人/电话</label><input class="inp" value="李工 138-8866-2856"></div>
+          </div>
+        </div>
+        <hr class="border-slate-100">
+        <div>
+          <div class="font-bold text-slate-800 mb-4 text-sm"><i class="fa-solid fa-warehouse text-indigo-500 mr-1.5"></i>租赁标的</div>
+          <div class="grid grid-cols-3 gap-4">
+            <div><label class="lbl">楼栋</label><select class="inp"><option>A3栋</option></select></div>
+            <div><label class="lbl">楼层/房号</label><select class="inp"><option>2F-201</option><option>2F-202</option></select></div>
+            <div><label class="lbl">面积(㎡)</label><input class="inp bg-slate-50" value="580" readonly></div>
+          </div>
+        </div>
+        <hr class="border-slate-100">
+        <div>
+          <div class="font-bold text-slate-800 mb-4 text-sm"><i class="fa-solid fa-calendar-days text-indigo-500 mr-1.5"></i>租期与租金</div>
+          <div class="grid grid-cols-3 gap-4">
+            <div><label class="lbl">合同起始日</label><input type="date" class="inp" value="2026-10-01"></div>
+            <div><label class="lbl">合同到期日</label><input type="date" class="inp" value="2028-09-30"></div>
+            <div><label class="lbl">租期(月)</label><input class="inp bg-slate-50" value="24" readonly></div>
+            <div><label class="lbl">月租金(元)</label><input class="inp" value="19,600"></div>
+            <div><label class="lbl">付款周期</label><select class="inp"><option>月付</option><option>季付</option><option>半年付</option><option>年付</option></select></div>
+            <div><label class="lbl">递增方式</label><select class="inp"><option>不递增</option><option>每年递增5%</option><option>第三年递增8%</option></select></div>
+            <div><label class="lbl">押金(月)</label><input class="inp" value="2"></div>
+            <div><label class="lbl">免租期(天)</label><input class="inp" value="15"></div>
+            <div><label class="lbl">物业费(元/月)</label><input class="inp" value="2,900"></div>
+          </div>
+        </div>
+        <hr class="border-slate-100">
+        <div>
+          <div class="font-bold text-slate-800 mb-4 text-sm"><i class="fa-solid fa-file-lines text-indigo-500 mr-1.5"></i>合同附件</div>
+          <div class="flex flex-wrap gap-3">
+            <div class="px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2 text-xs text-slate-500"><i class="fa-solid fa-file-pdf text-rose-400"></i>标准厂房租赁合同模板.pdf</div>
+            <div class="px-4 py-3 rounded-xl bg-slate-50 border-2 border-dashed border-slate-300 flex items-center gap-2 text-xs text-slate-400 cursor-pointer"><i class="fa-solid fa-plus"></i>上传补充协议</div>
+          </div>
+        </div>
+        <div class="bg-indigo-50/50 rounded-xl p-4 text-xs text-slate-500 leading-relaxed"><i class="fa-solid fa-circle-info text-indigo-400 mr-1"></i>提交后将进入审批流程：运营经理初审 → 财务复核 → 总经理终审 → 电子签署。预计 2-3 个工作日完成。</div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

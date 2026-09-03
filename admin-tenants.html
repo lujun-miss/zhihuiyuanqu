@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>15 企业档案 · 智慧园区管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body class="web">
+  <aside class="sidebar">
+    <div class="s-logo">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm"><i class="fa-solid fa-industry"></i></div>
+      <div><div class="text-white font-bold text-[15px]">智汇·科创园</div><div class="text-[10px] text-slate-500 mt-0.5">园区运营管理端</div></div>
+    </div>
+    <nav class="mt-1">
+      <div class="s-cat">总览</div>
+      <a class="s-link" href="admin-dashboard.html"><i class="fa-solid fa-gauge-high"></i>运营驾驶舱</a>
+      <div class="s-cat">资产管理</div>
+      <a class="s-link" href="admin-space.html"><i class="fa-regular fa-building"></i>房源资产</a>
+      <a class="s-link" href="admin-contracts.html"><i class="fa-solid fa-file-signature"></i>合同中心</a>
+      <div class="s-cat">经营管理</div>
+      <a class="s-link" href="admin-billing.html"><i class="fa-solid fa-coins"></i>收租管理</a>
+      <a class="s-link" href="admin-meter-manage.html"><i class="fa-solid fa-bolt"></i>水电表管理</a>
+      <a class="s-link" href="admin-meter.html"><i class="fa-regular fa-clipboard"></i>抄表录入</a>
+      <a class="s-link" href="admin-invoice.html"><i class="fa-solid fa-file-invoice"></i>发票管理</a>
+      <div class="s-cat">服务管理</div>
+      <a class="s-link" href="admin-workorder.html"><i class="fa-solid fa-clipboard-list"></i>工单管理</a>
+      <a class="s-link active" href="admin-tenants.html"><i class="fa-solid fa-users"></i>企业档案</a>
+      <a class="s-link" href="admin-notice.html"><i class="fa-solid fa-bullhorn"></i>公告管理</a>
+    </nav>
+    <div class="s-foot"><i class="fa-regular fa-circle-question mr-1"></i>帮助中心 · v2.4.0</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div>
+        <div class="font-bold text-[16px] text-slate-800">企业档案</div>
+        <div class="text-[11px] text-slate-400 mt-0.5">在租企业 86 家 · 装备制造 32 家 · 国家高新 9 家</div>
+      </div>
+      <div class="ml-auto flex items-center gap-2.5">
+        <div class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg"><i class="fa-solid fa-download mr-1"></i>导出名册</div>
+        <a href="admin-contract-form.html" class="btn h-9 px-4 bg-indigo-600 text-white text-xs rounded-lg"><i class="fa-solid fa-plus mr-1"></i>新增企业</a>
+      </div>
+    </header>
+    <div class="content">
+      <!-- 筛选 -->
+      <div class="wcard p-4 flex items-center gap-2 flex-wrap">
+        <div class="h-9 w-64 rounded-lg bg-slate-100 flex items-center px-3 gap-2 text-slate-400 text-xs"><i class="fa-solid fa-magnifying-glass"></i>搜索企业名称、法人、行业…</div>
+        <span class="chip bg-indigo-600 text-white !text-xs !py-2 !px-3.5">全部 86</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">装备制造 32</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">生物医药 12</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">信息技术 18</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">新能源 9</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5 ml-auto"><i class="fa-solid fa-arrow-down-wide-short"></i> 按入驻时间</span>
+      </div>
+      <!-- 企业表 -->
+      <div class="wcard mt-4 overflow-hidden">
+        <table class="dt">
+          <thead><tr><th>企业名称</th><th>行业</th><th>联系人</th><th>入驻时间</th><th>在租面积</th><th>在租合同</th><th>缴费记录</th><th>状态</th><th>操作</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="flex items-center gap-2.5"><span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 text-xs font-bold flex items-center justify-center">晨</span><div><div class="font-semibold text-slate-700">晨阳精密制造有限公司</div><div class="text-[11px] text-slate-400">统一信用代码 9132…8X7</div></div></div></td>
+              <td><span class="chip bg-slate-100 text-slate-500">装备制造</span></td><td>张工 · 138****8888</td><td>2023-09</td><td>260㎡</td><td>1 份</td><td><span class="text-emerald-500 font-medium">36 期无逾期</span></td><td><span class="chip bg-emerald-50 text-emerald-600">履约良好</span></td><td><a href="admin-tenant-detail.html" class="text-indigo-500 font-medium">档案 · 合同</a></td></tr>
+            <tr>
+              <td><div class="flex items-center gap-2.5"><span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-xs font-bold flex items-center justify-center">蓝</span><div><div class="font-semibold text-slate-700">蓝湾生物科技有限公司</div><div class="text-[11px] text-slate-400">国家高新技术企业</div></div></div></td>
+              <td><span class="chip bg-slate-100 text-slate-500">生物医药</span></td><td>刘总 · 139****2233</td><td>2022-04</td><td>480㎡</td><td>1 份</td><td><span class="text-rose-500 font-medium">当前逾期 ¥24,300</span></td><td><span class="chip bg-rose-50 text-rose-600">逾期</span></td><td><a href="admin-tenant-detail.html" class="text-indigo-500 font-medium">档案 · 催缴</a></td></tr>
+            <tr>
+              <td><div class="flex items-center gap-2.5"><span class="w-8 h-8 rounded-lg bg-violet-100 text-violet-600 text-xs font-bold flex items-center justify-center">星</span><div><div class="font-semibold text-slate-700">星驰机器人有限公司</div><div class="text-[11px] text-slate-400">规上企业 · 信用 A 级</div></div></div></td>
+              <td><span class="chip bg-slate-100 text-slate-500">智能制造</span></td><td>李经理 · 137****6655</td><td>2024-06</td><td>1,120㎡</td><td>2 份</td><td><span class="text-emerald-500 font-medium">14 期无逾期</span></td><td><span class="chip bg-emerald-50 text-emerald-600">履约良好</span></td><td><a href="admin-tenant-detail.html" class="text-indigo-500 font-medium">档案 · 合同</a></td></tr>
+            <tr>
+              <td><div class="flex items-center gap-2.5"><span class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 text-xs font-bold flex items-center justify-center">汉</span><div><div class="font-semibold text-slate-700">汉云软件有限公司</div><div class="text-[11px] text-slate-400">双软认证企业</div></div></div></td>
+              <td><span class="chip bg-slate-100 text-slate-500">信息技术</span></td><td>周工 · 136****0912</td><td>2024-11</td><td>240㎡</td><td>1 份</td><td><span class="text-emerald-500 font-medium">10 期无逾期</span></td><td><span class="chip bg-emerald-50 text-emerald-600">履约良好</span></td><td><a href="admin-tenant-detail.html" class="text-indigo-500 font-medium">档案 · 合同</a></td></tr>
+            <tr>
+              <td><div class="flex items-center gap-2.5"><span class="w-8 h-8 rounded-lg bg-rose-100 text-rose-600 text-xs font-bold flex items-center justify-center">极</span><div><div class="font-semibold text-slate-700">极光新能源有限公司</div><div class="text-[11px] text-slate-400">专精特新企业</div></div></div></td>
+              <td><span class="chip bg-slate-100 text-slate-500">新能源</span></td><td>赵总 · 135****7788</td><td>2023-02</td><td>860㎡</td><td>1 份</td><td><span class="text-rose-500 font-medium">逾期 ¥38,400</span></td><td><span class="chip bg-amber-50 text-amber-600">退租结算中</span></td><td><a href="admin-tenant-detail.html" class="text-indigo-500 font-medium">档案 · 结算</a></td></tr>
+            <tr>
+              <td><div class="flex items-center gap-2.5"><span class="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 text-xs font-bold flex items-center justify-center">泰</span><div><div class="font-semibold text-slate-700">泰科电子（苏州）有限公司</div><div class="text-[11px] text-slate-400">外资企业</div></div></div></td>
+              <td><span class="chip bg-slate-100 text-slate-500">电子制造</span></td><td>孙经理 · 133****4455</td><td>2021-10</td><td>420㎡</td><td>1 份</td><td><span class="text-emerald-500 font-medium">58 期无逾期</span></td><td><span class="chip bg-emerald-50 text-emerald-600">履约良好</span></td><td><a href="admin-tenant-detail.html" class="text-indigo-500 font-medium">档案 · 合同</a></td></tr>
+          </tbody>
+        </table>
+        <div class="p-4 flex items-center justify-between text-xs text-slate-400 border-t border-slate-100">
+          <span>显示 1-6 家 · 共 86 家</span>
+          <div class="flex items-center gap-1"><span class="px-2.5 py-1.5"><i class="fa-solid fa-angle-left"></i></span><span class="px-2.5 py-1.5 rounded-md bg-indigo-50 text-indigo-600 font-semibold">1</span><span class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 cursor-pointer">2</span><span class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 cursor-pointer">3</span><span class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 cursor-pointer">…</span><span class="px-2.5 py-1.5"><i class="fa-solid fa-angle-right"></i></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

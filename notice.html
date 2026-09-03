@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>园区公告 · 智慧园区</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="screen">
+  <div class="statusbar"><span>9:41</span><span class="space-x-1.5"><i class="fa-solid fa-signal text-xs"></i><i class="fa-solid fa-wifi text-xs"></i><i class="fa-solid fa-battery-three-quarters text-sm"></i></span></div>
+  <div class="navbar bg-white">
+    <a href="home.html" class="pl-2"><i class="fa-solid fa-angle-left"></i></a>
+    <span>园区公告</span><span></span>
+  </div>
+  <div class="scroll hsb px-4 pb-4">
+    <!-- Tab -->
+    <div class="mt-3.5 flex gap-2">
+      <span class="chip bg-indigo-600 text-white !text-xs !py-2 !px-3.5">全部</span>
+      <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">通知</span>
+      <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">检修</span>
+      <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">活动</span>
+    </div>
+    <!-- 公告列表 -->
+    <div class="mt-3.5 space-y-3">
+      <!-- 未读 · 置顶 -->
+      <div class="card overflow-hidden border-l-4 !border-l-indigo-500">
+        <div class="p-3.5">
+          <div class="flex items-center gap-2">
+            <span class="chip bg-rose-50 text-rose-500 !text-[10px]">NEW</span>
+            <span class="chip bg-indigo-50 text-indigo-500 !text-[10px]">通知</span>
+            <span class="text-[11px] text-slate-400 ml-auto">09-01</span>
+          </div>
+          <div class="text-sm font-bold mt-2 text-slate-800">中秋国庆双节园区车辆通行安排的通知</div>
+          <div class="text-[11px] text-slate-500 mt-1.5 leading-relaxed">中秋国庆双节期间（9月15日-10月7日），园区车行闸机将实行节假日通行模式，外来车辆需登记后方可入园…</div>
+          <div class="text-[11px] text-slate-400 mt-2 flex items-center gap-1"><i class="fa-regular fa-building"></i>园区运营中心</div>
+        </div>
+      </div>
+      <!-- 未读 -->
+      <div class="card overflow-hidden border-l-4 !border-l-amber-400">
+        <div class="p-3.5">
+          <div class="flex items-center gap-2">
+            <span class="chip bg-rose-50 text-rose-500 !text-[10px]">NEW</span>
+            <span class="chip bg-amber-50 text-amber-600 !text-[10px]">检修</span>
+            <span class="text-[11px] text-slate-400 ml-auto">08-28</span>
+          </div>
+          <div class="text-sm font-bold mt-2 text-slate-800">关于 9 月消防设施年度检测的公告</div>
+          <div class="text-[11px] text-slate-500 mt-1.5 leading-relaxed">园区将于 9 月 10 日-12 日进行消防设施年度检测，检测期间各楼层烟感报警器将进行联动测试…</div>
+          <div class="text-[11px] text-slate-400 mt-2 flex items-center gap-1"><i class="fa-regular fa-building"></i>安保部</div>
+        </div>
+      </div>
+      <!-- 已读 -->
+      <div class="card overflow-hidden opacity-75">
+        <div class="p-3.5">
+          <div class="flex items-center gap-2">
+            <span class="chip bg-slate-100 text-slate-400 !text-[10px]">活动</span>
+            <span class="text-[11px] text-slate-400 ml-auto">08-20</span>
+          </div>
+          <div class="text-sm font-bold mt-2 text-slate-700">园区中秋游园会活动报名通知</div>
+          <div class="text-[11px] text-slate-500 mt-1.5 leading-relaxed">园区运营中心将于 9 月 14 日举办中秋游园会活动，设有猜灯谜、DIY月饼、抽奖等环节，欢迎各企业员工踊跃报名…</div>
+          <div class="text-[11px] text-slate-400 mt-2 flex items-center gap-1"><i class="fa-regular fa-building"></i>园区运营中心</div>
+        </div>
+      </div>
+      <!-- 已读 -->
+      <div class="card overflow-hidden opacity-75">
+        <div class="p-3.5">
+          <div class="flex items-center gap-2">
+            <span class="chip bg-slate-100 text-slate-400 !text-[10px]">通知</span>
+            <span class="text-[11px] text-slate-400 ml-auto">08-15</span>
+          </div>
+          <div class="text-sm font-bold mt-2 text-slate-700">关于调整园区物业管理费缴纳方式的通知</div>
+          <div class="text-[11px] text-slate-500 mt-1.5 leading-relaxed">自 9 月起，物业费将与租金合并生成账单，企业可通过小程序一并缴纳，无需单独缴费…</div>
+          <div class="text-[11px] text-slate-400 mt-2 flex items-center gap-1"><i class="fa-regular fa-building"></i>财务部</div>
+        </div>
+      </div>
+      <!-- 已读 -->
+      <div class="card overflow-hidden opacity-75">
+        <div class="p-3.5">
+          <div class="flex items-center gap-2">
+            <span class="chip bg-slate-100 text-slate-400 !text-[10px]">检修</span>
+            <span class="text-[11px] text-slate-400 ml-auto">08-10</span>
+          </div>
+          <div class="text-sm font-bold mt-2 text-slate-700">B2栋电梯停运检修通知</div>
+          <div class="text-[11px] text-slate-500 mt-1.5 leading-relaxed">B2栋 2 号电梯将于 8 月 15 日 9:00-17:00 进行年检检修，届时请使用 1 号电梯或走消防楼梯…</div>
+          <div class="text-[11px] text-slate-400 mt-2 flex items-center gap-1"><i class="fa-regular fa-building"></i>设施运维部</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tabbar">
+    <a class="t-item" href="home.html"><i class="fa-solid fa-house"></i>首页</a>
+    <a class="t-item" href="assets.html"><i class="fa-regular fa-building"></i>空间</a>
+    <a class="t-item" href="repair.html"><i class="fa-solid fa-screwdriver-wrench"></i>服务</a>
+    <a class="t-item" href="me.html"><i class="fa-regular fa-user"></i>我的</a>
+  </div>
+</div>
+</body>
+</html>

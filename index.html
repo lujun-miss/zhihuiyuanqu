@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>智慧园区管理系统 · 原型预览</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+<style>
+  body{width:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;height:100vh;overflow:hidden;background:#0b1020;color:#cbd5e1}
+  /* 端卡片 */
+  .port-tab{display:flex;align-items:center;gap:12px;padding:10px 16px;border-radius:12px;cursor:pointer;transition:all .2s;border:1px solid transparent}
+  .port-tab:hover{background:rgba(255,255,255,.04)}
+  .port-tab.active{background:rgba(99,102,241,.12);border-color:rgba(99,102,241,.3)}
+  .port-tab .p-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+  .port-tab .p-info{min-width:0}
+  .port-tab .p-name{font-size:14px;font-weight:700;color:#e2e8f0;white-space:nowrap}
+  .port-tab.active .p-name{color:#fff}
+  .port-tab .p-desc{font-size:11px;color:#64748b;margin-top:1px;white-space:nowrap}
+  .port-tab .p-count{font-size:11px;color:#475569;margin-left:auto;flex-shrink:0}
+  .port-tab.active .p-count{color:#818cf8}
+  /* 页面列表 */
+  .plist{display:flex;gap:6px;overflow-x:auto;padding:8px 16px;scrollbar-width:thin;scrollbar-color:#334155 transparent}
+  .plist::-webkit-scrollbar{height:4px}
+  .plist::-webkit-scrollbar-thumb{background:#334155;border-radius:2px}
+  .pchip{display:flex;align-items:center;gap:5px;padding:6px 12px;border-radius:8px;font-size:12px;color:#94a3b8;white-space:nowrap;cursor:pointer;transition:all .15s;border:1px solid transparent;flex-shrink:0}
+  .pchip:hover{background:rgba(255,255,255,.06);color:#e2e8f0}
+  .pchip.active{background:rgba(99,102,241,.2);color:#fff;border-color:rgba(99,102,241,.4);font-weight:600}
+  .pchip .pnum{font-size:10px;opacity:.6}
+</style>
+</head>
+<body>
+  <!-- 顶栏 -->
+  <header class="h-14 flex items-center gap-3 px-5 border-b border-white/10">
+    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white"><i class="fa-solid fa-industry text-sm"></i></div>
+    <div>
+      <div class="text-white font-bold text-sm leading-tight">智慧园区管理系统</div>
+      <div class="text-[10px] text-slate-500 mt-0.5">高保真原型 · 三端联动 · 可导入 Figma</div>
+    </div>
+    <a id="openNew" href="home.html" target="_blank" class="ml-auto h-9 px-3.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 text-xs flex items-center gap-1.5"><i class="fa-solid fa-arrow-up-right-from-square"></i>新窗口打开</a>
+    <span class="chip bg-white/5 text-slate-400 !py-2 !px-3 !text-[11px]"><i class="fa-brands fa-figma"></i> 可导入 Figma</span>
+  </header>
+
+  <!-- 三端选择 -->
+  <div class="flex items-center gap-2 px-5 py-2.5 border-b border-white/10">
+    <div class="port-tab active" data-port="tenant">
+      <div class="p-icon bg-indigo-500/15 text-indigo-400"><i class="fa-solid fa-mobile-screen"></i></div>
+      <div class="p-info"><div class="p-name">租户端 · 企业小程序</div><div class="p-desc">微信小程序 · 租户日常使用</div></div>
+      <span class="p-count">12 页</span>
+    </div>
+    <div class="port-tab" data-port="repair">
+      <div class="p-icon bg-amber-500/15 text-amber-400"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+      <div class="p-info"><div class="p-name">维修端 · 小程序</div><div class="p-desc">维修工人手机端 · 接单完工</div></div>
+      <span class="p-count">3 页</span>
+    </div>
+    <div class="port-tab" data-port="admin">
+      <div class="p-icon bg-emerald-500/15 text-emerald-400"><i class="fa-solid fa-display"></i></div>
+      <div class="p-info"><div class="p-name">运营端 · Web 管理后台</div><div class="p-desc">PC 浏览器 · 园区运营管理</div></div>
+      <span class="p-count">22 页</span>
+    </div>
+  </div>
+
+  <!-- 页面列表（按端切换） -->
+  <div id="plist-tenant" class="plist border-b border-white/10">
+    <a class="pchip" data-href="login.html" data-mode="phone" data-label="登录 / 注册"><span class="pnum">01</span>登录 / 注册</a>
+    <a class="pchip active" data-href="home.html" data-mode="phone" data-label="首页 · 服务门户"><span class="pnum">02</span>首页 · 服务门户</a>
+    <a class="pchip" data-href="assets.html" data-mode="phone" data-label="园区空间 · 招商房源"><span class="pnum">03</span>园区空间 · 招商房源</a>
+    <a class="pchip" data-href="billing.html" data-mode="phone" data-label="账单缴费"><span class="pnum">04</span>账单缴费</a>
+    <a class="pchip" data-href="payment.html" data-mode="phone" data-label="收银台 · 在线支付"><span class="pnum">05</span>收银台 · 微信支付</a>
+    <a class="pchip" data-href="contract.html" data-mode="phone" data-label="合同管理 · 列表"><span class="pnum">06</span>合同管理</a>
+    <a class="pchip" data-href="contract-detail.html" data-mode="phone" data-label="合同详情 · 履约进度"><span class="pnum">07</span>合同详情</a>
+    <a class="pchip" data-href="repair.html" data-mode="phone" data-label="服务工单 · 报修"><span class="pnum">08</span>服务工单 · 报修</a>
+    <a class="pchip" data-href="utility.html" data-mode="phone" data-label="水电用量"><span class="pnum">09</span>水电用量</a>
+    <a class="pchip" data-href="invoice.html" data-mode="phone" data-label="发票申请"><span class="pnum">10</span>发票申请</a>
+    <a class="pchip" data-href="notice.html" data-mode="phone" data-label="园区公告"><span class="pnum">11</span>园区公告</a>
+    <a class="pchip" data-href="me.html" data-mode="phone" data-label="个人中心"><span class="pnum">12</span>个人中心</a>
+  </div>
+  <div id="plist-repair" class="plist border-b border-white/10" style="display:none">
+    <a class="pchip active" data-href="repair-home.html" data-mode="phone" data-label="维修工作台 · 接单"><span class="pnum">01</span>维修工作台 · 接单</a>
+    <a class="pchip" data-href="repair-detail.html" data-mode="phone" data-label="工单详情 · 维修端"><span class="pnum">02</span>工单详情</a>
+    <a class="pchip" data-href="repair-complete.html" data-mode="phone" data-label="提交完工 · 填报"><span class="pnum">03</span>提交完工 · 填报</a>
+  </div>
+  <div id="plist-admin" class="plist border-b border-white/10" style="display:none">
+    <a class="pchip active" data-href="admin-dashboard.html" data-mode="web" data-label="运营驾驶舱"><span class="pnum">01</span>运营驾驶舱</a>
+    <a class="pchip" data-href="admin-space.html" data-mode="web" data-label="房源资产"><span class="pnum">02</span>房源资产</a>
+    <a class="pchip" data-href="admin-billing.html" data-mode="web" data-label="收租管理"><span class="pnum">03</span>收租管理</a>
+    <a class="pchip" data-href="admin-contracts.html" data-mode="web" data-label="合同中心"><span class="pnum">04</span>合同中心</a>
+    <a class="pchip" data-href="admin-workorder.html" data-mode="web" data-label="工单管理"><span class="pnum">05</span>工单管理</a>
+    <a class="pchip" data-href="admin-tenants.html" data-mode="web" data-label="企业档案"><span class="pnum">06</span>企业档案</a>
+    <a class="pchip" data-href="admin-meter-manage.html" data-mode="web" data-label="水电表管理"><span class="pnum">07</span>水电表管理</a>
+    <a class="pchip" data-href="admin-meter.html" data-mode="web" data-label="抄表录入"><span class="pnum">08</span>抄表录入</a>
+    <a class="pchip" data-href="admin-invoice.html" data-mode="web" data-label="发票管理"><span class="pnum">09</span>发票管理</a>
+    <a class="pchip" data-href="admin-notice.html" data-mode="web" data-label="公告管理"><span class="pnum">10</span>公告管理</a>
+    <a class="pchip" data-href="admin-space-form.html" data-mode="web" data-label="新增房源"><span class="pnum">11</span>新增房源</a>
+    <a class="pchip" data-href="admin-contract-form.html" data-mode="web" data-label="新建合同"><span class="pnum">12</span>新建合同</a>
+    <a class="pchip" data-href="admin-contract-detail.html" data-mode="web" data-label="合同详情"><span class="pnum">13</span>合同详情</a>
+    <a class="pchip" data-href="admin-bill-detail.html" data-mode="web" data-label="账单详情"><span class="pnum">14</span>账单详情</a>
+    <a class="pchip" data-href="admin-workorder-detail.html" data-mode="web" data-label="工单详情"><span class="pnum">15</span>工单详情</a>
+    <a class="pchip" data-href="admin-tenant-detail.html" data-mode="web" data-label="企业详情"><span class="pnum">16</span>企业详情</a>
+    <a class="pchip" data-href="admin-notice-form.html" data-mode="web" data-label="新建公告"><span class="pnum">17</span>新建公告</a>
+    <a class="pchip" data-href="admin-meter-form.html" data-mode="web" data-label="抄表录入表单"><span class="pnum">18</span>抄表录入表单</a>
+    <a class="pchip" data-href="admin-workorder-form.html" data-mode="web" data-label="新建工单"><span class="pnum">19</span>新建工单</a>
+    <a class="pchip" data-href="admin-workorder-dispatch.html" data-mode="web" data-label="工单派单"><span class="pnum">20</span>工单派单</a>
+    <a class="pchip" data-href="admin-workorder-accept.html" data-mode="web" data-label="工单验收"><span class="pnum">21</span>工单验收</a>
+  </div>
+
+  <!-- 预览区 -->
+  <main class="flex items-center justify-center overflow-y-auto hsb p-4" style="height:calc(100vh - 134px);background:#e8ecf3" id="stage">
+    <div id="frameWrap" class="phone-mode"><iframe id="previewFrame" src="home.html" title="原型预览"></iframe></div>
+  </main>
+
+  <script>
+    const ports=[...document.querySelectorAll('.port-tab')];
+    const allChips=[...document.querySelectorAll('.pchip')];
+    const frame=document.getElementById('previewFrame');
+    const wrap=document.getElementById('frameWrap');
+    const stage=document.getElementById('stage');
+    const openNew=document.getElementById('openNew');
+    const plists={tenant:document.getElementById('plist-tenant'),repair:document.getElementById('plist-repair'),admin:document.getElementById('plist-admin')};
+
+    ports.forEach(pt=>{
+      pt.addEventListener('click',()=>{
+        ports.forEach(p=>p.classList.remove('active'));
+        pt.classList.add('active');
+        const port=pt.dataset.port;
+        Object.values(plists).forEach(el=>el.style.display='none');
+        plists[port].style.display='flex';
+        // 自动加载该端第一个页面
+        const firstChip=plists[port].querySelector('.pchip');
+        if(firstChip) load(firstChip);
+      });
+    });
+
+    function load(chip){
+      allChips.forEach(c=>c.classList.remove('active'));
+      chip.classList.add('active');
+      const web=chip.dataset.mode==='web';
+      wrap.className=web?'web-mode w-full':'phone-mode';
+      stage.style.alignItems=web?'stretch':'center';
+      frame.src=chip.dataset.href;
+      openNew.href=chip.dataset.href;
+    }
+    allChips.forEach(c=>c.addEventListener('click',e=>{e.preventDefault();load(c)}));
+  </script>
+</body>
+</html>

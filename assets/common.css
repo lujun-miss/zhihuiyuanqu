@@ -1,0 +1,69 @@
+/* 智慧园区管理系统 · 公共设计系统（纯盒模型布局，Figma 导入友好） */
+*{box-sizing:border-box;-webkit-font-smoothing:antialiased}
+html,body{margin:0;padding:0}
+body{width:375px;margin:0 auto;background:#0b1020;color:#0f172a;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+/* 手机屏幕容器 375x812 */
+.screen{width:375px;height:812px;background:#f4f6fb;position:relative;display:flex;flex-direction:column;overflow:hidden}
+/* 中部可滚动区 */
+.scroll{flex:1;overflow-y:auto}
+.hsb{scrollbar-width:none}
+.hsb::-webkit-scrollbar{display:none}
+/* iOS 状态栏 */
+.statusbar{height:44px;padding:0 22px;display:flex;align-items:center;justify-content:space-between;font-size:14px;font-weight:600;flex-shrink:0}
+/* 顶部导航栏 */
+.navbar{height:48px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;font-size:16px;font-weight:600;flex-shrink:0}
+/* 底部标签栏 */
+.tabbar{height:78px;background:#fff;border-top:1px solid #eceff5;display:flex;justify-content:space-around;padding-top:9px;flex-shrink:0}
+.tabbar .t-item{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;color:#94a3b8;line-height:1;text-decoration:none;cursor:pointer}
+a.t-item:hover{opacity:.8}
+.tabbar .t-item i{font-size:19px}
+.tabbar .t-item.active{color:#4f46e5;font-weight:600}
+/* 通用卡片 */
+.card{background:#fff;border-radius:16px;box-shadow:0 1px 3px rgba(15,23,42,.05)}
+/* 彩色图标底座 */
+.itile{width:42px;height:42px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.itile-sm{width:32px;height:32px;border-radius:10px;font-size:14px}
+/* 小徽章 */
+.chip{font-size:10px;line-height:1;padding:4px 8px;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:3px;white-space:nowrap}
+/* 输入框 */
+.field{height:46px;border-radius:12px;border:1px solid #e6e9f2;background:#f7f8fc;padding:0 14px;font-size:14px;display:flex;align-items:center;gap:10px}
+.field input{border:0;outline:0;background:transparent;font-size:14px;width:100%}
+/* 主按钮 */
+.btn{height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600}
+
+/* ===== 运营端 Web 后台 ===== */
+body.web{width:100%;height:auto;min-height:100vh;background:#eef1f7;display:flex}
+.sidebar{width:224px;flex-shrink:0;height:100vh;position:sticky;top:0;background:#111a36;display:flex;flex-direction:column}
+.s-logo{display:flex;align-items:center;gap:10px;padding:20px 18px;border-bottom:1px solid rgba(255,255,255,.06)}
+.s-cat{font-size:11px;color:#5b6484;padding:18px 22px 6px;letter-spacing:.05em}
+.s-link{display:flex;align-items:center;gap:11px;height:42px;margin:1px 12px;padding:0 12px;border-radius:10px;font-size:13.5px;color:#98a1c3}
+.s-link i{width:17px;text-align:center;font-size:14px}
+.s-link:hover{color:#fff;background:rgba(255,255,255,.05)}
+.s-link.active{color:#fff;background:linear-gradient(90deg,rgba(99,102,241,.28),rgba(99,102,241,.1));font-weight:600}
+.s-foot{margin-top:auto;padding:16px 22px;font-size:11px;color:#4b5474;border-top:1px solid rgba(255,255,255,.06)}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.topbar{height:64px;background:#fff;border-bottom:1px solid #e6e9f2;display:flex;align-items:center;gap:14px;padding:0 24px;position:sticky;top:0;z-index:20}
+.content{flex:1;padding:24px;width:100%;max-width:1400px;margin:0 auto}
+.wcard{background:#fff;border-radius:14px;box-shadow:0 1px 3px rgba(15,23,42,.05)}
+.lbl{display:block;font-size:12px;color:#64748b;margin-bottom:6px;font-weight:500}
+.inp{width:100%;height:38px;border:1px solid #d1d5e0;border-radius:8px;padding:0 12px;font-size:13px;color:#334155;background:#fff;outline:none;transition:border-color .15s;box-sizing:border-box}
+.inp:focus{border-color:#6366f1;box-shadow:0 0 0 3px rgba(99,102,241,.1)}
+.inp[readonly]{background:#f7f8fc;color:#94a3b8}
+select.inp{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;cursor:pointer}
+textarea.inp{height:auto;padding:10px 12px;resize:vertical;line-height:1.6}
+table.dt{width:100%;border-collapse:collapse;font-size:13px}
+table.dt th{background:#f7f8fc;color:#64748b;font-weight:600;text-align:left;padding:11px 16px;font-size:12px;white-space:nowrap}
+table.dt td{padding:13px 16px;border-top:1px solid #f1f3f9;color:#334155;white-space:nowrap}
+table.dt tr:hover td{background:#fafbff}
+
+/* ===== index 原型导航台 ===== */
+.n-link{display:flex;align-items:center;gap:9px;padding:9px 12px;border-radius:10px;font-size:13px;color:#475569;cursor:pointer}
+.n-link:hover{background:#f1f4fb;color:#1e293b}
+.n-link.active{background:#eef2ff;color:#4f46e5;font-weight:600}
+.n-link .num{font-size:11px;font-weight:700;color:#94a3b8;width:18px;flex-shrink:0}
+.n-link.active .num{color:#6366f1}
+.n-link .ext{margin-left:auto;color:#94a3b8;font-size:10px;padding:4px;border-radius:6px}
+.n-link .ext:hover{color:#4f46e5;background:#e0e7ff}
+.phone-mode iframe{width:375px;height:812px;border-radius:26px;border:1px solid #dbe0ee;box-shadow:0 24px 60px -18px rgba(15,23,42,.45);background:#fff}
+.web-mode iframe{width:100%;height:calc(100vh - 96px);border-radius:14px;border:1px solid #dbe0ee;box-shadow:0 16px 44px -16px rgba(15,23,42,.3);background:#fff}

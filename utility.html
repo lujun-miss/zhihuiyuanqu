@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>水电用量 · 智慧园区</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="screen">
+  <div class="statusbar"><span>9:41</span><span class="space-x-1.5"><i class="fa-solid fa-signal text-xs"></i><i class="fa-solid fa-wifi text-xs"></i><i class="fa-solid fa-battery-three-quarters text-sm"></i></span></div>
+  <div class="navbar bg-white">
+    <a href="home.html" class="pl-2"><i class="fa-solid fa-angle-left text-lg"></i></a>
+    <span>水电用量</span><span></span>
+  </div>
+  <div class="scroll hsb px-4 pb-4">
+    <!-- 月份切换 -->
+    <div class="flex items-center justify-between mt-3.5 px-1">
+      <i class="fa-solid fa-angle-left text-slate-400"></i>
+      <span class="text-sm font-bold text-slate-800">2026年8月</span>
+      <i class="fa-solid fa-angle-right text-slate-300"></i>
+    </div>
+    <!-- 用量概览 -->
+    <div class="grid grid-cols-2 gap-3 mt-3">
+      <div class="card p-4">
+        <div class="flex items-center gap-2"><div class="itile bg-amber-50 text-amber-500 itile-sm"><i class="fa-solid fa-bolt"></i></div><span class="text-xs text-slate-400">电费</span></div>
+        <div class="text-xl font-bold mt-2 text-amber-500">¥1,850.00</div>
+        <div class="text-[11px] text-slate-400 mt-1">用量 2,128 度 · 单价 0.87 元/度</div>
+      </div>
+      <div class="card p-4">
+        <div class="flex items-center gap-2"><div class="itile bg-sky-50 text-sky-500 itile-sm"><i class="fa-solid fa-droplet"></i></div><span class="text-xs text-slate-400">水费</span></div>
+        <div class="text-xl font-bold mt-2 text-sky-500">¥350.00</div>
+        <div class="text-[11px] text-slate-400 mt-1">用量 78 吨 · 单价 4.5 元/吨</div>
+      </div>
+    </div>
+    <!-- 读数明细 -->
+    <div class="card p-4 mt-3">
+      <div class="font-bold text-sm mb-3">抄表读数</div>
+      <div class="space-y-3">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5"><div class="itile bg-amber-50 text-amber-500 itile-sm"><i class="fa-solid fa-bolt"></i></div><div><div class="text-xs font-medium">电表 E-A3-201-001</div><div class="text-[11px] text-slate-400 mt-0.5">抄表日 08-30</div></div></div>
+          <div class="text-right"><div class="text-xs text-slate-400">上期 14,560 → 本期 16,688</div><div class="text-sm font-bold text-amber-500 mt-0.5">+2,128 度</div></div>
+        </div>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2.5"><div class="itile bg-sky-50 text-sky-500 itile-sm"><i class="fa-solid fa-droplet"></i></div><div><div class="text-xs font-medium">水表 W-A3-201-001</div><div class="text-[11px] text-slate-400 mt-0.5">抄表日 08-30</div></div></div>
+          <div class="text-right"><div class="text-xs text-slate-400">上期 820 → 本期 898</div><div class="text-sm font-bold text-sky-500 mt-0.5">+78 吨</div></div>
+        </div>
+      </div>
+    </div>
+    <!-- 月度趋势 -->
+    <div class="card p-4 mt-3">
+      <div class="font-bold text-sm mb-3">近 6 月用量趋势</div>
+      <div class="flex items-end gap-2 h-24">
+        <div class="flex-1 flex flex-col items-center"><div class="w-full flex justify-center gap-0.5 items-end" style="height:60px"><div class="w-3 bg-amber-300 rounded-t" style="height:55%"></div><div class="w-3 bg-sky-300 rounded-t" style="height:30%"></div></div><div class="text-[9px] text-slate-400 mt-1">3月</div></div>
+        <div class="flex-1 flex flex-col items-center"><div class="w-full flex justify-center gap-0.5 items-end" style="height:60px"><div class="w-3 bg-amber-300 rounded-t" style="height:60%"></div><div class="w-3 bg-sky-300 rounded-t" style="height:35%"></div></div><div class="text-[9px] text-slate-400 mt-1">4月</div></div>
+        <div class="flex-1 flex flex-col items-center"><div class="w-full flex justify-center gap-0.5 items-end" style="height:60px"><div class="w-3 bg-amber-300 rounded-t" style="height:50%"></div><div class="w-3 bg-sky-300 rounded-t" style="height:25%"></div></div><div class="text-[9px] text-slate-400 mt-1">5月</div></div>
+        <div class="flex-1 flex flex-col items-center"><div class="w-full flex justify-center gap-0.5 items-end" style="height:60px"><div class="w-3 bg-amber-300 rounded-t" style="height:70%"></div><div class="w-3 bg-sky-300 rounded-t" style="height:40%"></div></div><div class="text-[9px] text-slate-400 mt-1">6月</div></div>
+        <div class="flex-1 flex flex-col items-center"><div class="w-full flex justify-center gap-0.5 items-end" style="height:60px"><div class="w-3 bg-amber-300 rounded-t" style="height:85%"></div><div class="w-3 bg-sky-300 rounded-t" style="height:45%"></div></div><div class="text-[9px] text-slate-400 mt-1">7月</div></div>
+        <div class="flex-1 flex flex-col items-center"><div class="w-full flex justify-center gap-0.5 items-end" style="height:60px"><div class="w-3 bg-amber-400 rounded-t" style="height:90%"></div><div class="w-3 bg-sky-400 rounded-t" style="height:50%"></div></div><div class="text-[9px] text-slate-500 mt-1">8月</div></div>
+      </div>
+      <div class="flex gap-4 mt-2 text-[10px] text-slate-400 justify-center"><span><span class="inline-block w-2 h-2 rounded-sm bg-amber-400 mr-1"></span>电（度）</span><span><span class="inline-block w-2 h-2 rounded-sm bg-sky-400 mr-1"></span>水（吨）</span></div>
+    </div>
+    <!-- 账单状态 -->
+    <div class="card p-4 mt-3 flex items-center justify-between">
+      <div class="flex items-center gap-2.5"><div class="itile bg-indigo-50 text-indigo-500 itile-sm"><i class="fa-solid fa-file-invoice-dollar"></i></div><div><div class="text-sm font-medium">本月水电费账单</div><div class="text-[11px] text-slate-400 mt-0.5">¥2,200.00 · 已出账</div></div></div>
+      <a href="billing.html" class="btn h-8 px-3 bg-indigo-600 text-white text-xs rounded-lg">去缴费</a>
+    </div>
+  </div>
+  <div class="tabbar">
+    <a class="t-item" href="home.html"><i class="fa-solid fa-house"></i>首页</a>
+    <a class="t-item" href="assets.html"><i class="fa-regular fa-building"></i>空间</a>
+    <a class="t-item" href="repair.html"><i class="fa-solid fa-screwdriver-wrench"></i>服务</a>
+    <a class="t-item" href="me.html"><i class="fa-regular fa-user"></i>我的</a>
+  </div>
+</div>
+</body>
+</html>

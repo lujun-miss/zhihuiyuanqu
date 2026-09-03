@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>工单管理 · 智慧园区管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body class="web">
+  <aside class="sidebar">
+    <div class="s-logo">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm"><i class="fa-solid fa-industry"></i></div>
+      <div><div class="text-white font-bold text-[15px]">智汇·科创园</div><div class="text-[10px] text-slate-500 mt-0.5">园区运营管理端</div></div>
+    </div>
+    <nav class="mt-1">
+      <div class="s-cat">总览</div>
+      <a class="s-link" href="admin-dashboard.html"><i class="fa-solid fa-gauge-high"></i>运营驾驶舱</a>
+      <div class="s-cat">资产管理</div>
+      <a class="s-link" href="admin-space.html"><i class="fa-regular fa-building"></i>房源资产</a>
+      <a class="s-link" href="admin-contracts.html"><i class="fa-solid fa-file-signature"></i>合同中心</a>
+      <div class="s-cat">经营管理</div>
+      <a class="s-link" href="admin-billing.html"><i class="fa-solid fa-coins"></i>收租管理</a>
+      <a class="s-link" href="admin-meter-manage.html"><i class="fa-solid fa-bolt"></i>水电表管理</a>
+      <a class="s-link" href="admin-meter.html"><i class="fa-regular fa-clipboard"></i>抄表录入</a>
+      <a class="s-link" href="admin-invoice.html"><i class="fa-solid fa-file-invoice"></i>发票管理</a>
+      <div class="s-cat">服务管理</div>
+      <a class="s-link active" href="admin-workorder.html"><i class="fa-solid fa-clipboard-list"></i>工单管理</a>
+      <a class="s-link" href="admin-tenants.html"><i class="fa-solid fa-users"></i>企业档案</a>
+      <a class="s-link" href="admin-notice.html"><i class="fa-solid fa-bullhorn"></i>公告管理</a>
+    </nav>
+    <div class="s-foot"><i class="fa-regular fa-circle-question mr-1"></i>帮助中心 · v2.4.0</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div>
+        <div class="font-bold text-[16px] text-slate-800">工单管理</div>
+        <div class="text-[11px] text-slate-400 mt-0.5">报修 → 接单 → 派单 → 处理 → 完工 → 验收 → 归档</div>
+      </div>
+      <div class="ml-auto flex items-center gap-2.5">
+        <div class="h-9 w-56 rounded-lg bg-slate-100 flex items-center px-3 gap-2 text-slate-400 text-xs"><i class="fa-solid fa-magnifying-glass"></i>搜索工单编号、企业…</div>
+        <a href="admin-workorder-form.html" class="btn h-9 px-4 bg-indigo-600 text-white text-xs rounded-lg"><i class="fa-solid fa-plus mr-1"></i>新建工单</a>
+      </div>
+    </header>
+    <div class="content">
+      <!-- 工单流程说明 -->
+      <div class="wcard p-4">
+        <div class="flex items-center gap-1 text-xs">
+          <span class="text-slate-400 mr-1">工单流转：</span>
+          <span class="chip bg-slate-100 text-slate-600 !text-[11px] !py-1.5 !px-3">① 提交（租户小程序 / 巡检 / IoT）</span>
+          <i class="fa-solid fa-angle-right text-slate-300"></i>
+          <span class="chip bg-indigo-50 text-indigo-600 !text-[11px] !py-1.5 !px-3">② 接单·派单</span>
+          <i class="fa-solid fa-angle-right text-slate-300"></i>
+          <span class="chip bg-sky-50 text-sky-600 !text-[11px] !py-1.5 !px-3">③ 处理</span>
+          <i class="fa-solid fa-angle-right text-slate-300"></i>
+          <span class="chip bg-amber-50 text-amber-600 !text-[11px] !py-1.5 !px-3">④ 完工·验收</span>
+          <i class="fa-solid fa-angle-right text-slate-300"></i>
+          <span class="chip bg-emerald-50 text-emerald-600 !text-[11px] !py-1.5 !px-3">⑤ 评价·归档</span>
+          <span class="ml-auto text-[11px] text-slate-400"><i class="fa-solid fa-circle-info text-indigo-400"></i> 紧急工单 SLA 4h · 一般工单 SLA 24h</span>
+        </div>
+      </div>
+      <!-- 筛选条 -->
+      <div class="wcard p-4 mt-4 flex items-center gap-3 flex-wrap">
+        <select class="inp !w-32"><option>全部来源</option><option>租户报修</option><option>巡检发现</option><option>IoT告警</option><option>合同验收</option></select>
+        <select class="inp !w-32"><option>全部类型</option><option>水电维修</option><option>门窗维修</option><option>空调暖通</option><option>电梯故障</option><option>保洁绿化</option><option>安保消防</option><option>弱电网络</option></select>
+        <select class="inp !w-28"><option>全部优先级</option><option>紧急</option><option>一般</option></select>
+        <span class="chip bg-indigo-600 text-white !text-xs !py-2 !px-3.5 cursor-pointer">全部 28</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5 cursor-pointer">待接单 3</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5 cursor-pointer">已派单 2</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5 cursor-pointer">处理中 5</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5 cursor-pointer">待验收 4</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5 cursor-pointer">已完成 14</span>
+        <span class="ml-auto text-xs text-slate-500">今日新增 6 · 今日完结 12</span>
+      </div>
+      <!-- 工单列表 -->
+      <div class="wcard mt-4 overflow-hidden">
+        <table class="dt">
+          <thead><tr><th>工单编号</th><th>来源</th><th>类型</th><th>报修位置</th><th>问题描述</th><th>优先级</th><th>处理人</th><th>状态</th><th>提交时间</th><th>操作</th></tr></thead>
+          <tbody>
+            <!-- 待接单 - 紧急 -->
+            <tr><td class="font-semibold">GD-20260901-03</td><td><span class="chip bg-violet-50 text-violet-600 !text-[10px]">📱 租户报修</span></td><td><span class="chip bg-amber-50 text-amber-600 !text-[10px]">空调暖通</span></td><td>A1栋 5F-501</td><td>车间中央空调故障停机，影响生产</td><td><span class="chip bg-rose-50 text-rose-600">🔥 紧急</span></td><td class="text-slate-300">—</td><td><span class="chip bg-amber-50 text-amber-600">待接单</span></td><td class="text-[11px]">09-01 08:15</td><td><a href="admin-workorder-dispatch.html" class="text-indigo-500 font-medium">接单·派单</a></td></tr>
+            <!-- 待接单 - 一般 -->
+            <tr><td class="font-semibold">GD-20260901-01</td><td><span class="chip bg-violet-50 text-violet-600 !text-[10px]">📱 租户报修</span></td><td><span class="chip bg-amber-50 text-amber-600 !text-[10px]">水电维修</span></td><td>B1栋 3F 公区</td><td>3F 公共走廊照明闪烁</td><td><span class="chip bg-slate-100 text-slate-500">一般</span></td><td class="text-slate-300">—</td><td><span class="chip bg-amber-50 text-amber-600">待接单</span></td><td class="text-[11px]">09-01 09:30</td><td><a href="admin-workorder-dispatch.html" class="text-indigo-500 font-medium">接单·派单</a></td></tr>
+            <tr><td class="font-semibold">GD-20260901-02</td><td><span class="chip bg-sky-50 text-sky-600 !text-[10px]">🔍 巡检发现</span></td><td><span class="chip bg-amber-50 text-amber-600 !text-[10px]">安保消防</span></td><td>B2栋 1F 消防通道</td><td>消防通道杂物堆放，需清理</td><td><span class="chip bg-slate-100 text-slate-500">一般</span></td><td class="text-slate-300">—</td><td><span class="chip bg-amber-50 text-amber-600">待接单</span></td><td class="text-[11px]">09-01 10:00</td><td><a href="admin-workorder-dispatch.html" class="text-indigo-500 font-medium">接单·派单</a></td></tr>
+            <!-- 已派单 -->
+            <tr><td class="font-semibold">GD-20260901-04</td><td><span class="chip bg-violet-50 text-violet-600 !text-[10px]">📱 租户报修</span></td><td><span class="chip bg-amber-50 text-amber-600 !text-[10px]">门窗维修</span></td><td>A3栋 2F-201</td><td>办公室玻璃门合页松动</td><td><span class="chip bg-slate-100 text-slate-500">一般</span></td><td><div class="flex items-center gap-1"><div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 text-[9px] font-bold flex items-center justify-center">李</div><span class="text-[11px]">李工·设施组</span></div></td><td><span class="chip bg-sky-50 text-sky-600">已派单</span></td><td class="text-[11px]">09-01 11:00</td><td><a href="admin-workorder-detail.html" class="text-indigo-500 font-medium">查看</a></td></tr>
+            <tr><td class="font-semibold">GD-20260901-05</td><td><span class="chip bg-rose-50 text-rose-600 !text-[10px]">⚠️ IoT告警</span></td><td><span class="chip bg-amber-50 text-amber-600 !text-[10px]">电梯故障</span></td><td>A3栋 1F 客梯</td><td>电梯运行震动异常，IoT自动告警</td><td><span class="chip bg-rose-50 text-rose-600">🔥 紧急</span></td><td><div class="flex items-center gap-1"><div class="w-5 h-5 rounded-full bg-sky-100 text-sky-600 text-[9px] font-bold flex items-center justify-center">王</div><span class="text-[11px]">王工·暖通组</span></div></td><td><span class="chip bg-sky-50 text-sky-600">已派单</span></td><td class="text-[11px]">09-01 11:20</td><td><a href="admin-workorder-detail.html" class="text-indigo-500 font-medium">查看</a></td></tr>
+            <!-- 处理中 -->
+            <tr><td class="font-semibold">GD-20260830-01</td><td><span class="chip bg-violet-50 text-violet-600 !text-[10px]">📱 租户报修</span></td><td><span class="chip bg-amber-50 text-amber-600 !text-[10px]">空调暖通</span></td><td>A3栋 2F-201</td><td>中央空调不制冷，车间温度偏高</td><td><span class="chip bg-slate-100 text-slate-500">一般</span></td><td><div class="flex items-center gap-1"><div class="w-5 h-5 rounded-full bg-sky-100 text-sky-600 text-[9px] font-bold flex items-center justify-center">王</div><span class="text-[11px]">王工·暖通组</span></div></td><td><span class="chip bg-sky-50 text-sky-600">处理中</span></td><td class="text-[11px]">08-30 14:00</td><td><a href="admin-workorder-detail.html" class="text-indigo-500 font-medium">查看</a></td></tr>
+            <tr><td class="font-semibold">GD-20260831-07</td><td><span class="chip bg-violet-50 text-violet-600 !text-[10px]">📱 租户报修</span></td><td><span class="chip bg-amber-50 text-amber-600 !text-[10px]">门窗维修</span></td><td>B2栋 1F-101</td><td>仓库卷帘门异响，开关不顺畅</td><td><span class="chip bg-slate-100 text-slate-500">一般</span></td><td><div class="flex items-center gap-1"><div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 text-[9px] font-bold flex items-center justify-center">李</div><span class="text-[11px]">李工·设施组</span></div></td><td><span class="chip bg-sky-50 text-sky-600">处理中</span></td><td class="text-[11px]">08-31 09:00</td><td><a href="admin-workorder-detail.html" class="text-indigo-500 font-medium">查看</a></td></tr>
+            <tr><td class="font-semibold">GD-20260822-03</td><td><span class="chip bg-violet-50 text-violet-600 !text-[10px]">📱 租户报修</span></td><td><span class="chip bg-amber-50 text-amber-600 !text-[10px]">弱电网络</span></td><td>A1栋 2F-201</td><td>办公区网络中断，影响全员办公</td><td><span class="chip bg-slate-100 text-slate-500">一般</span></td><td><div class="flex items-center gap-1"><div class="w-5 h-5 rounded-full bg-violet-100 text-violet-600 text-[9px] font-bold flex items-center justify-center">陈</div><span class="text-[11px]">陈工·弱电组</span></div></td><td><span class="chip bg-sky-50 text-sky-600">处理中</span></td><td class="text-[11px]">08-22 10:00</td><td><a href="admin-workorder-detail.html" class="text-indigo-500 font-medium">查看</a></td></tr>
+            <!-- 待验收 -->
+            <tr><td class="font-semibold">GD-20260831-03</td><td><span class="chip bg-violet-50 text-violet-600 !text-[10px]">📱 租户报修</span></td><td><span class="chip bg-amber-50 text-amber-600 !text-[10px]">水电维修</span></td><td>B1栋 3F-302</td><td>卫生间水管漏水</td><td><span class="chip bg-slate-100 text-slate-500">一般</span></td><td><div class="flex items-center gap-1"><div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 text-[9px] font-bold flex items-center justify-center">李</div><span class="text-[11px]">李工·设施组</span></div></td><td><span class="chip bg-amber-50 text-amber-600">待验收</span></td><td class="text-[11px]">08-31 14:00</td><td><a href="admin-workorder-accept.html" class="text-indigo-500 font-medium">验收</a></td></tr>
+            <tr><td class="font-semibold">GD-20260831-04</td><td><span class="chip bg-sky-50 text-sky-600 !text-[10px]">🔍 巡检发现</span></td><td><span class="chip bg-amber-50 text-amber-600 !text-[10px]">保洁绿化</span></td><td>C栋 公区</td><td>3F 男卫洁具损坏需更换</td><td><span class="chip bg-slate-100 text-slate-500">一般</span></td><td><div class="flex items-center gap-1"><div class="w-5 h-5 rounded-full bg-amber-100 text-amber-600 text-[9px] font-bold flex items-center justify-center">张</div><span class="text-[11px]">张姐·保洁组</span></div></td><td><span class="chip bg-amber-50 text-amber-600">待验收</span></td><td class="text-[11px]">08-31 15:30</td><td><a href="admin-workorder-accept.html" class="text-indigo-500 font-medium">验收</a></td></tr>
+            <!-- 已完成 -->
+            <tr><td class="font-semibold">GD-20260826-08</td><td><span class="chip bg-violet-50 text-violet-600 !text-[10px]">📱 租户报修</span></td><td><span class="chip bg-amber-50 text-amber-600 !text-[10px]">水电维修</span></td><td>A3栋 2F 公区</td><td>走廊照明灯管更换</td><td><span class="chip bg-slate-100 text-slate-500">一般</span></td><td><div class="flex items-center gap-1"><div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 text-[9px] font-bold flex items-center justify-center">李</div><span class="text-[11px]">李工·设施组</span></div></td><td><span class="chip bg-emerald-50 text-emerald-600">已完成</span></td><td class="text-[11px]">08-26 09:00</td><td><a href="admin-workorder-detail.html" class="text-slate-400 hover:text-indigo-500">详情</a></td></tr>
+            <tr><td class="font-semibold">GD-20260828-02</td><td><span class="chip bg-sky-50 text-sky-600 !text-[10px]">🔍 巡检发现</span></td><td><span class="chip bg-amber-50 text-amber-600 !text-[10px]">安保消防</span></td><td>B1栋 3F 公区</td><td>消防喷淋末端渗水维修</td><td><span class="chip bg-slate-100 text-slate-500">一般</span></td><td><div class="flex items-center gap-1"><div class="w-5 h-5 rounded-full bg-sky-100 text-sky-600 text-[9px] font-bold flex items-center justify-center">王</div><span class="text-[11px]">王工·暖通组</span></div></td><td><span class="chip bg-emerald-50 text-emerald-600">已完成</span></td><td class="text-[11px]">08-28 10:00</td><td><a href="admin-workorder-detail.html" class="text-slate-400 hover:text-indigo-500">详情</a></td></tr>
+          </tbody>
+        </table>
+        <div class="p-4 flex items-center justify-between text-xs text-slate-400 border-t border-slate-100">
+          <span>显示 1-12 条 · 共 28 条</span>
+          <div class="flex items-center gap-1"><span class="px-2.5 py-1.5"><i class="fa-solid fa-angle-left"></i></span><span class="px-2.5 py-1.5 rounded-md bg-indigo-50 text-indigo-600 font-semibold">1</span><span class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 cursor-pointer">2</span><span class="px-2.5 py-1.5"><i class="fa-solid fa-angle-right"></i></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

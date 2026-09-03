@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>抄表录入 · 智慧园区管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body class="web">
+  <aside class="sidebar">
+    <div class="s-logo">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm"><i class="fa-solid fa-industry"></i></div>
+      <div><div class="text-white font-bold text-[15px]">智汇·科创园</div><div class="text-[10px] text-slate-500 mt-0.5">园区运营管理端</div></div>
+    </div>
+    <nav class="mt-1">
+      <div class="s-cat">总览</div>
+      <a class="s-link" href="admin-dashboard.html"><i class="fa-solid fa-gauge-high"></i>运营驾驶舱</a>
+      <div class="s-cat">资产管理</div>
+      <a class="s-link" href="admin-space.html"><i class="fa-regular fa-building"></i>房源资产</a>
+      <a class="s-link" href="admin-contracts.html"><i class="fa-solid fa-file-signature"></i>合同中心</a>
+      <div class="s-cat">经营管理</div>
+      <a class="s-link" href="admin-billing.html"><i class="fa-solid fa-coins"></i>收租管理</a>
+      <a class="s-link" href="admin-meter-manage.html"><i class="fa-solid fa-bolt"></i>水电表管理</a>
+      <a class="s-link active" href="admin-meter.html"><i class="fa-regular fa-clipboard"></i>抄表录入</a>
+      <a class="s-link" href="admin-invoice.html"><i class="fa-solid fa-file-invoice"></i>发票管理</a>
+      <div class="s-cat">服务管理</div>
+      <a class="s-link" href="admin-workorder.html"><i class="fa-solid fa-clipboard-list"></i>工单管理</a>
+      <a class="s-link" href="admin-tenants.html"><i class="fa-solid fa-users"></i>企业档案</a>
+      <a class="s-link" href="admin-notice.html"><i class="fa-solid fa-bullhorn"></i>公告管理</a>
+    </nav>
+    <div class="s-foot"><i class="fa-regular fa-circle-question mr-1"></i>帮助中心 · v2.4.0</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div>
+        <div class="font-bold text-[16px] text-slate-800">录入抄表读数</div>
+        <div class="text-[11px] text-slate-400 mt-0.5">2026年8月 · 房间 A1-5F-501 · 星驰机器人</div>
+      </div>
+      <div class="ml-auto flex items-center gap-2.5">
+        <a href="admin-meter.html" class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg">返回抄表列表</a>
+        <a href="admin-meter-manage.html" class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg">查看水电表</a>
+      </div>
+    </header>
+    <div class="content">
+      <div class="grid grid-cols-2 gap-5">
+        <!-- 房间信息卡 -->
+        <div class="wcard p-5">
+          <div class="font-bold text-slate-800 text-sm mb-4">房间 & 水电表</div>
+          <div class="rounded-xl bg-slate-50 p-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center"><i class="fa-regular fa-building"></i></div>
+              <div>
+                <div class="font-bold text-slate-800">A1栋 · 5F · 501</div>
+                <div class="text-[11px] text-slate-400 mt-0.5">星驰机器人 · 300㎡</div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3 mt-4">
+              <div class="rounded-lg border border-indigo-100 bg-indigo-50/50 p-3">
+                <div class="flex items-center gap-1.5 text-[11px] text-indigo-500"><i class="fa-solid fa-bolt"></i>电表</div>
+                <div class="font-mono font-bold text-slate-800 mt-1 text-[13px]">E-A1-501-001</div>
+                <div class="text-[11px] text-slate-500 mt-0.5">安装 2025-03-15 · 初始 8,200</div>
+                <div class="text-[11px] text-slate-500">单价 ¥0.92/度</div>
+              </div>
+              <div class="rounded-lg border border-sky-100 bg-sky-50/50 p-3">
+                <div class="flex items-center gap-1.5 text-[11px] text-sky-500"><i class="fa-solid fa-droplet"></i>水表</div>
+                <div class="font-mono font-bold text-slate-800 mt-1 text-[13px]">W-A1-501-001</div>
+                <div class="text-[11px] text-slate-500 mt-0.5">安装 2025-03-15 · 初始 186</div>
+                <div class="text-[11px] text-slate-500">单价 ¥4.5/吨</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 抄表录入 -->
+        <div class="wcard p-5">
+          <div class="font-bold text-slate-800 text-sm mb-4">2026年8月 抄表录入</div>
+          <!-- 电表 -->
+          <div class="rounded-xl border border-slate-200 p-4 mb-4">
+            <div class="flex items-center gap-2 mb-3"><span class="chip bg-indigo-50 text-indigo-600 !text-[11px] !py-1">电表 E-A1-501-001</span></div>
+            <div class="grid grid-cols-3 gap-3 items-end">
+              <div>
+                <label class="lbl">上期读数（7月）</label>
+                <input class="inp" value="15,200" readonly>
+              </div>
+              <div>
+                <label class="lbl">本期读数（8月）<span class="text-rose-400">*</span></label>
+                <input class="inp" placeholder="请输入本期读数">
+              </div>
+              <div>
+                <label class="lbl">本期用量（自动）</label>
+                <input class="inp" placeholder="自动计算" readonly>
+              </div>
+            </div>
+            <div class="mt-3 text-[11px] text-slate-400">预估费用：<span class="font-bold text-slate-700">用量 × ¥0.92</span></div>
+          </div>
+          <!-- 水表 -->
+          <div class="rounded-xl border border-slate-200 p-4">
+            <div class="flex items-center gap-2 mb-3"><span class="chip bg-sky-50 text-sky-600 !text-[11px] !py-1">水表 W-A1-501-001</span></div>
+            <div class="grid grid-cols-3 gap-3 items-end">
+              <div>
+                <label class="lbl">上期读数（7月）</label>
+                <input class="inp" value="512" readonly>
+              </div>
+              <div>
+                <label class="lbl">本期读数（8月）<span class="text-rose-400">*</span></label>
+                <input class="inp" placeholder="请输入本期读数">
+              </div>
+              <div>
+                <label class="lbl">本期用量（自动）</label>
+                <input class="inp" placeholder="自动计算" readonly>
+              </div>
+            </div>
+            <div class="mt-3 text-[11px] text-slate-400">预估费用：<span class="font-bold text-slate-700">用量 × ¥4.5</span></div>
+          </div>
+          <div class="flex gap-3 mt-5">
+            <a href="admin-meter.html" class="btn h-10 flex-1 border border-slate-200 text-slate-600 text-sm rounded-lg">取消</a>
+            <a href="admin-meter.html" class="btn h-10 flex-1 bg-indigo-600 text-white text-sm rounded-lg">保存抄表数据</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

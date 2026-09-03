@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>12 收租管理 · 智慧园区管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body class="web">
+  <aside class="sidebar">
+    <div class="s-logo">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm"><i class="fa-solid fa-industry"></i></div>
+      <div><div class="text-white font-bold text-[15px]">智汇·科创园</div><div class="text-[10px] text-slate-500 mt-0.5">园区运营管理端</div></div>
+    </div>
+    <nav class="mt-1">
+      <div class="s-cat">总览</div>
+      <a class="s-link" href="admin-dashboard.html"><i class="fa-solid fa-gauge-high"></i>运营驾驶舱</a>
+      <div class="s-cat">资产管理</div>
+      <a class="s-link" href="admin-space.html"><i class="fa-regular fa-building"></i>房源资产</a>
+      <a class="s-link" href="admin-contracts.html"><i class="fa-solid fa-file-signature"></i>合同中心</a>
+      <div class="s-cat">经营管理</div>
+      <a class="s-link active" href="admin-billing.html"><i class="fa-solid fa-coins"></i>收租管理</a>
+      <a class="s-link" href="admin-meter-manage.html"><i class="fa-solid fa-bolt"></i>水电表管理</a>
+      <a class="s-link" href="admin-meter.html"><i class="fa-regular fa-clipboard"></i>抄表录入</a>
+      <a class="s-link" href="admin-invoice.html"><i class="fa-solid fa-file-invoice"></i>发票管理</a>
+      <div class="s-cat">服务管理</div>
+      <a class="s-link" href="admin-workorder.html"><i class="fa-solid fa-clipboard-list"></i>工单管理</a>
+      <a class="s-link" href="admin-tenants.html"><i class="fa-solid fa-users"></i>企业档案</a>
+      <a class="s-link" href="admin-notice.html"><i class="fa-solid fa-bullhorn"></i>公告管理</a>
+    </nav>
+    <div class="s-foot"><i class="fa-regular fa-circle-question mr-1"></i>帮助中心 · v2.4.0</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div>
+        <div class="font-bold text-[16px] text-slate-800">收租管理</div>
+        <div class="text-[11px] text-slate-400 mt-0.5">账单周期 2026年9月 · 自动出账规则已开启</div>
+      </div>
+      <div class="ml-auto flex items-center gap-2.5">
+        <span class="chip bg-white border border-slate-200 text-slate-600 !text-xs !py-2 !px-3.5"><i class="fa-regular fa-calendar"></i> 2026年9月 <i class="fa-solid fa-angle-down"></i></span>
+        <div class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg"><i class="fa-solid fa-download mr-1"></i>导出</div>
+        <a href="admin-billing.html" class="btn h-9 px-4 border border-indigo-200 text-indigo-600 text-xs rounded-lg"><i class="fa-solid fa-bullhorn mr-1"></i>批量催缴</a>
+        <a href="admin-meter.html" class="btn h-9 px-4 bg-indigo-600 text-white text-xs rounded-lg"><i class="fa-solid fa-plus mr-1"></i>生成账单</a>
+      </div>
+    </header>
+    <div class="content">
+      <!-- KPI -->
+      <div class="grid grid-cols-4 gap-4">
+        <div class="wcard p-5"><div class="text-xs text-slate-400">本月应收</div><div class="text-2xl font-bold mt-2">¥486.0万</div><div class="text-[11px] text-slate-400 mt-1.5">98 笔账单</div></div>
+        <div class="wcard p-5"><div class="text-xs text-slate-400">已收金额</div><div class="text-2xl font-bold mt-2 text-emerald-500">¥392.6万</div><div class="text-[11px] text-slate-400 mt-1.5">68 笔 · 小程序支付占 62%</div></div>
+        <div class="wcard p-5"><div class="text-xs text-slate-400">逾期金额</div><div class="text-2xl font-bold mt-2 text-rose-500">¥58.4万</div><div class="text-[11px] text-slate-400 mt-1.5">12 笔 · 最长逾期 26 天</div></div>
+        <div class="wcard p-5">
+          <div class="flex justify-between text-xs"><span class="text-slate-400">收缴进度</span><span class="font-bold text-indigo-600">80.8%</span></div>
+          <div class="h-2.5 rounded-full bg-slate-100 mt-4 overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-indigo-500 to-violet-500" style="width:80.8%"></div></div>
+          <div class="flex justify-between text-[11px] text-slate-400 mt-2"><span>已收 68 笔</span><span>待收 30 笔</span></div>
+        </div>
+      </div>
+      <!-- 账单表 -->
+      <div class="wcard mt-4 overflow-hidden">
+        <div class="p-5 pb-3 flex items-center gap-2 flex-wrap">
+          <span class="font-bold text-slate-800 mr-2">账单明细</span>
+          <span class="chip bg-indigo-600 text-white !text-xs !py-2 !px-3.5">全部 98</span>
+          <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">待缴 18</span>
+          <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">已缴 68</span>
+          <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">逾期 12</span>
+          <div class="ml-auto h-9 w-52 rounded-lg bg-slate-100 flex items-center px-3 gap-2 text-slate-400 text-xs"><i class="fa-solid fa-magnifying-glass"></i>搜索企业、账单编号…</div>
+        </div>
+        <table class="dt">
+          <thead><tr><th>账单编号</th><th>承租企业</th><th>房源</th><th>费用类型</th><th>费用来源</th><th>账期</th><th>金额</th><th>到期日</th><th>状态</th><th>操作</th></tr></thead>
+          <tbody>
+            <tr><td>ZD-202609-0012</td><td><div class="flex items-center gap-2"><span class="w-7 h-7 rounded-full bg-amber-100 text-amber-600 text-[10px] font-bold flex items-center justify-center">晨</span>晨阳精密制造</div></td><td>A3栋 2F-201</td><td>租金 + 物业费</td><td><span class="chip bg-indigo-50 text-indigo-500 !text-[10px]">合同自动</span></td><td>2026-09</td><td class="font-bold">¥10,660.00</td><td>09-05</td><td><span class="chip bg-amber-50 text-amber-600">待缴</span></td><td><a href="admin-bill-detail.html" class="text-indigo-500 font-medium">催缴 · 详情</a></td></tr>
+            <tr><td>ZD-202609-0003</td><td><div class="flex items-center gap-2"><span class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-600 text-[10px] font-bold flex items-center justify-center">蓝</span>蓝湾生物科技</div></td><td>B1栋 3F-302</td><td>租金 + 物业费</td><td><span class="chip bg-indigo-50 text-indigo-500 !text-[10px]">合同自动</span></td><td>2026-09</td><td class="font-bold">¥24,300.00</td><td>09-05</td><td><span class="chip bg-emerald-50 text-emerald-600">已缴</span></td><td class="text-slate-400">电子回单</td></tr>
+            <tr><td>ZD-202609-0018</td><td><div class="flex items-center gap-2"><span class="w-7 h-7 rounded-full bg-rose-100 text-rose-600 text-[10px] font-bold flex items-center justify-center">极</span>极光新能源</div></td><td>A3栋 4F-401</td><td>租金</td><td><span class="chip bg-indigo-50 text-indigo-500 !text-[10px]">合同自动</span></td><td>2026-09</td><td class="font-bold">¥30,100.00</td><td>08-23</td><td><span class="chip bg-rose-50 text-rose-600">逾期 9 天</span></td><td><a href="admin-bill-detail.html" class="text-indigo-500 font-medium">催缴 · 详情</a></td></tr>
+            <tr><td>ZD-202609-0009</td><td><div class="flex items-center gap-2"><span class="w-7 h-7 rounded-full bg-violet-100 text-violet-600 text-[10px] font-bold flex items-center justify-center">星</span>星驰机器人</div></td><td>A1栋 5F-501</td><td>租金 + 物业费</td><td><span class="chip bg-indigo-50 text-indigo-500 !text-[10px]">合同自动</span></td><td>2026-09</td><td class="font-bold">¥52,800.00</td><td>09-05</td><td><span class="chip bg-emerald-50 text-emerald-600">已缴</span></td><td class="text-slate-400">对公到账</td></tr>
+            <tr><td>ZD-202608-0241</td><td><div class="flex items-center gap-2"><span class="w-7 h-7 rounded-full bg-amber-100 text-amber-600 text-[10px] font-bold flex items-center justify-center">晨</span>晨阳精密制造</div></td><td>A3栋 2F-201</td><td>电费 · 2,460度</td><td><a href="admin-meter.html" class="chip bg-amber-50 text-amber-600 !text-[10px] cursor-pointer">水电抄表</a></td><td>2026-08</td><td class="font-bold">¥1,850.00</td><td>09-05</td><td><span class="chip bg-amber-50 text-amber-600">待缴</span></td><td><a href="admin-bill-detail.html" class="text-indigo-500 font-medium">催缴 · 详情</a></td></tr>
+            <tr><td>ZD-202608-0252</td><td><div class="flex items-center gap-2"><span class="w-7 h-7 rounded-full bg-sky-100 text-sky-600 text-[10px] font-bold flex items-center justify-center">汉</span>汉云软件</div></td><td>A1栋 2F-201</td><td>水费 + 电费</td><td><a href="admin-meter.html" class="chip bg-amber-50 text-amber-600 !text-[10px] cursor-pointer">水电抄表</a></td><td>2026-08</td><td class="font-bold">¥1,730.00</td><td>09-08</td><td><span class="chip bg-emerald-50 text-emerald-600">已缴</span></td><td class="text-slate-400">电子回单</td></tr>
+            <tr><td>ZD-202609-0022</td><td><div class="flex items-center gap-2"><span class="w-7 h-7 rounded-full bg-slate-100 text-slate-600 text-[10px] font-bold flex items-center justify-center">泰</span>泰科电子</div></td><td>A1栋 3F-301</td><td>租金</td><td><span class="chip bg-indigo-50 text-indigo-500 !text-[10px]">合同自动</span></td><td>2026-09</td><td class="font-bold">¥9,760.00</td><td>09-10</td><td><span class="chip bg-slate-100 text-slate-400">未到期</span></td><td class="text-slate-400">自动扣费已开启</td></tr>
+          </tbody>
+        </table>
+        <div class="p-4 flex items-center justify-between text-xs text-slate-400 border-t border-slate-100">
+          <span>显示 1-7 条 · 共 98 条</span>
+          <div class="flex items-center gap-1"><span class="px-2.5 py-1.5"><i class="fa-solid fa-angle-left"></i></span><span class="px-2.5 py-1.5 rounded-md bg-indigo-50 text-indigo-600 font-semibold">1</span><span class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 cursor-pointer">2</span><span class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 cursor-pointer">3</span><span class="px-2.5 py-1.5"><i class="fa-solid fa-angle-right"></i></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

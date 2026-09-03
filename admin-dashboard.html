@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10 运营驾驶舱 · 智慧园区管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body class="web">
+  <!-- 侧边栏 -->
+  <aside class="sidebar">
+    <div class="s-logo">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm"><i class="fa-solid fa-industry"></i></div>
+      <div><div class="text-white font-bold text-[15px]">智汇·科创园</div><div class="text-[10px] text-slate-500 mt-0.5">园区运营管理端</div></div>
+    </div>
+    <nav class="mt-1">
+      <div class="s-cat">总览</div>
+      <a class="s-link active" href="admin-dashboard.html"><i class="fa-solid fa-gauge-high"></i>运营驾驶舱</a>
+      <div class="s-cat">资产管理</div>
+      <a class="s-link" href="admin-space.html"><i class="fa-regular fa-building"></i>房源资产</a>
+      <a class="s-link" href="admin-contracts.html"><i class="fa-solid fa-file-signature"></i>合同中心</a>
+      <div class="s-cat">经营管理</div>
+      <a class="s-link" href="admin-billing.html"><i class="fa-solid fa-coins"></i>收租管理</a>
+      <a class="s-link" href="admin-meter-manage.html"><i class="fa-solid fa-bolt"></i>水电表管理</a>
+      <a class="s-link" href="admin-meter.html"><i class="fa-regular fa-clipboard"></i>抄表录入</a>
+      <a class="s-link" href="admin-invoice.html"><i class="fa-solid fa-file-invoice"></i>发票管理</a>
+      <div class="s-cat">服务管理</div>
+      <a class="s-link" href="admin-workorder.html"><i class="fa-solid fa-clipboard-list"></i>工单管理</a>
+      <a class="s-link" href="admin-tenants.html"><i class="fa-solid fa-users"></i>企业档案</a>
+      <a class="s-link" href="admin-notice.html"><i class="fa-solid fa-bullhorn"></i>公告管理</a>
+    </nav>
+    <div class="s-foot"><i class="fa-regular fa-circle-question mr-1"></i>帮助中心 · v2.4.0</div>
+  </aside>
+  <div class="main">
+    <!-- 顶栏 -->
+    <header class="topbar">
+      <div>
+        <div class="font-bold text-[16px] text-slate-800">运营驾驶舱</div>
+        <div class="text-[11px] text-slate-400 mt-0.5">智汇·科创园 · 数据截至 2026-09-01 09:30</div>
+      </div>
+      <div class="ml-auto flex items-center gap-3">
+        <div class="h-9 w-56 rounded-lg bg-slate-100 flex items-center px-3 gap-2 text-slate-400 text-xs"><i class="fa-solid fa-magnifying-glass"></i>搜索企业、房源、账单…</div>
+        <div class="relative w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-500"><i class="fa-regular fa-bell"></i><span class="absolute -top-0.5 -right-0.5 w-4 h-4 bg-rose-500 text-white text-[9px] rounded-full flex items-center justify-center">5</span></div>
+        <div class="flex items-center gap-2.5 pl-3 border-l border-slate-200"><div class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 text-xs font-bold flex items-center justify-center">张</div><div><div class="text-xs font-semibold text-slate-700">张工</div><div class="text-[10px] text-slate-400">园区运营中心</div></div></div>
+      </div>
+    </header>
+    <div class="content">
+      <!-- KPI -->
+      <div class="grid grid-cols-4 gap-4">
+        <div class="wcard p-5">
+          <div class="flex items-center justify-between"><span class="text-xs text-slate-400">入驻率</span><span class="w-9 h-9 rounded-xl bg-indigo-50 text-indigo-500 flex items-center justify-center"><i class="fa-solid fa-door-open"></i></span></div>
+          <div class="text-2xl font-bold mt-2">92.4%<span class="text-xs text-emerald-500 font-medium ml-2"><i class="fa-solid fa-arrow-trend-up"></i> +1.2%</span></div>
+          <div class="text-[11px] text-slate-400 mt-1.5">可租面积 12.8万㎡ · 空置 7 套</div>
+        </div>
+        <div class="wcard p-5">
+          <div class="flex items-center justify-between"><span class="text-xs text-slate-400">在租企业</span><span class="w-9 h-9 rounded-xl bg-violet-50 text-violet-500 flex items-center justify-center"><i class="fa-solid fa-users"></i></span></div>
+          <div class="text-2xl font-bold mt-2">86 家<span class="text-xs text-slate-400 font-medium ml-2">本月新签 3</span></div>
+          <div class="text-[11px] text-slate-400 mt-1.5">规上企业 21 家 · 国家高新 9 家</div>
+        </div>
+        <div class="wcard p-5">
+          <div class="flex items-center justify-between"><span class="text-xs text-slate-400">本月应收</span><span class="w-9 h-9 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center"><i class="fa-solid fa-file-invoice-dollar"></i></span></div>
+          <div class="text-2xl font-bold mt-2">¥486.0万</div>
+          <div class="text-[11px] text-slate-400 mt-1.5">98 笔账单 · 租金占 76%</div>
+        </div>
+        <div class="wcard p-5">
+          <div class="flex items-center justify-between"><span class="text-xs text-slate-400">收缴率</span><span class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-500 flex items-center justify-center"><i class="fa-solid fa-hand-holding-dollar"></i></span></div>
+          <div class="text-2xl font-bold mt-2">80.8%<span class="text-xs text-rose-500 font-medium ml-2">逾期 ¥58.4万</span></div>
+          <div class="text-[11px] text-slate-400 mt-1.5">已收 ¥392.6万 · 12 笔逾期</div>
+        </div>
+      </div>
+      <!-- 图表区 -->
+      <div class="grid grid-cols-3 gap-4 mt-4">
+        <div class="wcard p-5 col-span-2">
+          <div class="flex items-center justify-between">
+            <div><div class="font-bold text-slate-800">近 6 月收款趋势</div><div class="text-[11px] text-slate-400 mt-1">含租金、物业费、水电费</div></div>
+            <span class="chip bg-slate-100 text-slate-500 !text-[11px] !py-1.5">单位：万元</span>
+          </div>
+          <div class="flex items-end justify-between gap-4 h-44 mt-6 px-2">
+            <div class="flex-1 flex flex-col items-center justify-end gap-1.5 h-full"><span class="text-[11px] text-slate-400">410</span><div class="w-10 rounded-t-lg bg-indigo-100" style="height:82px"></div><span class="text-[11px] text-slate-400">3月</span></div>
+            <div class="flex-1 flex flex-col items-center justify-end gap-1.5 h-full"><span class="text-[11px] text-slate-400">435</span><div class="w-10 rounded-t-lg bg-indigo-100" style="height:87px"></div><span class="text-[11px] text-slate-400">4月</span></div>
+            <div class="flex-1 flex flex-col items-center justify-end gap-1.5 h-full"><span class="text-[11px] text-slate-400">460</span><div class="w-10 rounded-t-lg bg-indigo-200" style="height:92px"></div><span class="text-[11px] text-slate-400">5月</span></div>
+            <div class="flex-1 flex flex-col items-center justify-end gap-1.5 h-full"><span class="text-[11px] text-slate-400">428</span><div class="w-10 rounded-t-lg bg-indigo-200" style="height:86px"></div><span class="text-[11px] text-slate-400">6月</span></div>
+            <div class="flex-1 flex flex-col items-center justify-end gap-1.5 h-full"><span class="text-[11px] text-slate-400">475</span><div class="w-10 rounded-t-lg bg-indigo-300" style="height:95px"></div><span class="text-[11px] text-slate-400">7月</span></div>
+            <div class="flex-1 flex flex-col items-center justify-end gap-1.5 h-full"><span class="text-[11px] font-bold text-indigo-600">392</span><div class="w-10 rounded-t-lg bg-gradient-to-t from-indigo-600 to-indigo-400" style="height:78px"></div><span class="text-[11px] font-semibold">8月</span></div>
+          </div>
+        </div>
+        <div class="wcard p-5">
+          <div class="font-bold text-slate-800">空间业态分布</div>
+          <div class="flex flex-col items-center mt-5">
+            <div class="relative w-36 h-36">
+              <svg viewBox="0 0 42 42" class="w-36 h-36">
+                <circle cx="21" cy="21" r="15.9" fill="none" stroke="#eef2ff" stroke-width="7"/>
+                <circle cx="21" cy="21" r="15.9" fill="none" stroke="#4f46e5" stroke-width="7" stroke-dasharray="58 42" stroke-dashoffset="25"/>
+                <circle cx="21" cy="21" r="15.9" fill="none" stroke="#8b5cf6" stroke-width="7" stroke-dasharray="24 76" stroke-dashoffset="-33"/>
+                <circle cx="21" cy="21" r="15.9" fill="none" stroke="#38bdf8" stroke-width="7" stroke-dasharray="12 88" stroke-dashoffset="-57"/>
+                <circle cx="21" cy="21" r="15.9" fill="none" stroke="#34d399" stroke-width="7" stroke-dasharray="6 94" stroke-dashoffset="-69"/>
+              </svg>
+              <div class="absolute inset-0 flex flex-col items-center justify-center"><div class="text-xl font-bold">86</div><div class="text-[10px] text-slate-400">在租企业</div></div>
+            </div>
+            <div class="w-full space-y-2.5 mt-5">
+              <div class="flex items-center gap-2 text-xs"><span class="w-2.5 h-2.5 rounded-sm bg-indigo-600"></span><span class="flex-1 text-slate-500">智能厂房</span><span class="font-semibold">58%</span></div>
+              <div class="flex items-center gap-2 text-xs"><span class="w-2.5 h-2.5 rounded-sm bg-violet-500"></span><span class="flex-1 text-slate-500">研发办公</span><span class="font-semibold">24%</span></div>
+              <div class="flex items-center gap-2 text-xs"><span class="w-2.5 h-2.5 rounded-sm bg-sky-400"></span><span class="flex-1 text-slate-500">仓储物流</span><span class="font-semibold">12%</span></div>
+              <div class="flex items-center gap-2 text-xs"><span class="w-2.5 h-2.5 rounded-sm bg-emerald-400"></span><span class="flex-1 text-slate-500">商业配套</span><span class="font-semibold">6%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 待办与收款 -->
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="wcard p-5">
+          <div class="flex items-center justify-between"><span class="font-bold text-slate-800">待办事项</span><span class="text-xs text-slate-400">全部 <i class="fa-solid fa-angle-right"></i></span></div>
+          <div class="mt-2 divide-y divide-slate-50">
+            <div class="py-3 flex items-center gap-3"><div class="itile bg-amber-50 text-amber-500 itile-sm"><i class="fa-solid fa-file-signature"></i></div><span class="flex-1 text-sm text-slate-600">合同 30 天内到期</span><span class="chip bg-amber-50 text-amber-600">3 份</span><span class="text-xs text-indigo-500 font-medium cursor-pointer">去处理</span></div>
+            <div class="py-3 flex items-center gap-3"><div class="itile bg-rose-50 text-rose-500 itile-sm"><i class="fa-solid fa-rectangle-list"></i></div><span class="flex-1 text-sm text-slate-600">新签 / 续租待审批</span><span class="chip bg-rose-50 text-rose-600">4 件</span><span class="text-xs text-indigo-500 font-medium cursor-pointer">去处理</span></div>
+            <div class="py-3 flex items-center gap-3"><div class="itile bg-orange-50 text-orange-500 itile-sm"><i class="fa-solid fa-screwdriver-wrench"></i></div><span class="flex-1 text-sm text-slate-600">待处理工单</span><span class="chip bg-orange-50 text-orange-600">5 单</span><span class="text-xs text-indigo-500 font-medium cursor-pointer">去处理</span></div>
+            <div class="py-3 flex items-center gap-3"><div class="itile bg-indigo-50 text-indigo-500 itile-sm"><i class="fa-solid fa-hand-holding-dollar"></i></div><span class="flex-1 text-sm text-slate-600">逾期账单催缴</span><span class="chip bg-indigo-50 text-indigo-600">12 笔</span><span class="text-xs text-indigo-500 font-medium cursor-pointer">去处理</span></div>
+          </div>
+        </div>
+        <div class="wcard p-5">
+          <div class="flex items-center justify-between"><span class="font-bold text-slate-800">最新收款</span><span class="text-xs text-indigo-500 font-medium">收款流水 <i class="fa-solid fa-angle-right"></i></span></div>
+          <div class="mt-2 divide-y divide-slate-50">
+            <div class="py-3 flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-indigo-100 text-indigo-600 text-xs font-bold flex items-center justify-center">蓝</div><div class="flex-1"><div class="text-sm text-slate-700">蓝湾生物科技</div><div class="text-[11px] text-slate-400 mt-0.5">09-01 10:24 · 微信支付（小程序）</div></div><div class="text-sm font-bold text-emerald-500">+¥24,300.00</div></div>
+            <div class="py-3 flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-violet-100 text-violet-600 text-xs font-bold flex items-center justify-center">星</div><div class="flex-1"><div class="text-sm text-slate-700">星驰机器人</div><div class="text-[11px] text-slate-400 mt-0.5">09-01 09:47 · 对公转账</div></div><div class="text-sm font-bold text-emerald-500">+¥52,800.00</div></div>
+            <div class="py-3 flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-sky-100 text-sky-600 text-xs font-bold flex items-center justify-center">汉</div><div class="flex-1"><div class="text-sm text-slate-700">汉云软件</div><div class="text-[11px] text-slate-400 mt-0.5">08-31 16:03 · 微信支付（小程序）</div></div><div class="text-sm font-bold text-emerald-500">+¥11,360.00</div></div>
+            <div class="py-3 flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-amber-100 text-amber-600 text-xs font-bold flex items-center justify-center">泰</div><div class="flex-1"><div class="text-sm text-slate-700">泰科电子</div><div class="text-[11px] text-slate-400 mt-0.5">08-31 14:22 · 支付宝</div></div><div class="text-sm font-bold text-emerald-500">+¥9,760.00</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

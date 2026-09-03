@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>08 服务工单 · 智慧园区</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="screen">
+  <div class="statusbar"><span>9:41</span><span class="space-x-1.5"><i class="fa-solid fa-signal text-xs"></i><i class="fa-solid fa-wifi text-xs"></i><i class="fa-solid fa-battery-three-quarters text-sm"></i></span></div>
+  <div class="navbar bg-white"><a href="home.html" class="pl-2"><i class="fa-solid fa-angle-left text-lg"></i></a><span>服务工单</span><span class="text-xs font-normal text-slate-400">服务热线 400-888-6666</span></div>
+  <div class="scroll hsb px-4 pb-4">
+    <!-- 报修表单 -->
+    <div class="card p-4 mt-3">
+      <div class="font-bold text-[15px]">新增报修</div>
+      <div class="text-xs text-slate-400 mt-1">报修位置：A3栋 · 2F-201</div>
+      <div class="text-xs text-slate-500 mt-4 mb-2">故障类型</div>
+      <div class="flex gap-2 flex-wrap">
+        <span class="chip bg-indigo-600 text-white !text-xs !py-2 !px-3.5"><i class="fa-solid fa-fan"></i> 空调</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">水电</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">门窗</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">网络</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">其他</span>
+      </div>
+      <div class="text-xs text-slate-500 mt-4 mb-2">照片补充 <span class="text-slate-300">（最多 6 张）</span></div>
+      <div class="flex gap-2">
+        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=200&q=80" class="w-16 h-16 rounded-xl object-cover" alt="现场照片">
+        <div class="w-16 h-16 rounded-xl border-2 border-dashed border-slate-200 flex flex-col items-center justify-center text-slate-300"><i class="fa-solid fa-camera"></i></div>
+      </div>
+      <div class="text-xs text-slate-500 mt-4 mb-2">问题描述</div>
+      <div class="rounded-xl border border-slate-200 bg-slate-50 p-3 text-xs text-slate-400 leading-relaxed h-20">车间 2 号区域中央空调不制冷，出风正常但无冷气，已持续 2 天…</div>
+      <div class="text-xs text-slate-500 mt-4 mb-2">紧急程度</div>
+      <div class="flex gap-2">
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">一般</span>
+        <span class="chip bg-amber-500 text-white !text-xs !py-2 !px-3.5">紧急</span>
+        <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">特急</span>
+      </div>
+      <div class="btn bg-indigo-600 text-white mt-4 h-11">提交工单</div>
+    </div>
+    <!-- 我的工单 -->
+    <div class="flex items-center justify-between mt-5 mb-2.5"><div class="font-bold text-[15px]">我的工单</div><span class="text-xs text-slate-400">全部 <i class="fa-solid fa-angle-right"></i></span></div>
+    <div class="card p-4 flex items-center gap-3">
+      <div class="itile bg-orange-50 text-orange-500"><i class="fa-solid fa-fan"></i></div>
+      <div class="flex-1 min-w-0"><div class="text-sm font-semibold truncate">中央空调不制冷</div><div class="text-[11px] text-slate-400 mt-0.5">GD-20260830-01 · 工程师 王工处理中</div></div>
+      <span class="chip bg-sky-50 text-sky-600">处理中</span>
+    </div>
+    <div class="card p-4 flex items-center gap-3 mt-2.5">
+      <div class="itile bg-emerald-50 text-emerald-500"><i class="fa-solid fa-lightbulb"></i></div>
+      <div class="flex-1 min-w-0"><div class="text-sm font-semibold truncate">走廊照明灯管更换</div><div class="text-[11px] text-slate-400 mt-0.5">GD-20260826-08 · 08-26 完成</div></div>
+      <span class="chip bg-emerald-50 text-emerald-600">已完成</span>
+    </div>
+    <div class="card p-4 flex items-center gap-3 mt-2.5">
+      <div class="itile bg-amber-50 text-amber-500"><i class="fa-solid fa-network-wired"></i></div>
+      <div class="flex-1 min-w-0"><div class="text-sm font-semibold truncate">办公区网络中断</div><div class="text-[11px] text-slate-400 mt-0.5">GD-20260822-03 · 等待派单</div></div>
+      <span class="chip bg-amber-50 text-amber-600">待接单</span>
+    </div>
+  </div>
+  <div class="tabbar">
+    <a class="t-item" href="home.html"><i class="fa-solid fa-house"></i>首页</a>
+    <a class="t-item" href="assets.html"><i class="fa-regular fa-building"></i>空间</a>
+    <a class="t-item active" href="repair.html"><i class="fa-solid fa-screwdriver-wrench"></i>服务</a>
+    <a class="t-item" href="me.html"><i class="fa-regular fa-user"></i>我的</a>
+  </div>
+</div>
+</body>
+</html>

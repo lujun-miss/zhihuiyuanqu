@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>新建工单 · 智慧园区管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body class="web">
+  <aside class="sidebar">
+    <div class="s-logo"><div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm"><i class="fa-solid fa-industry"></i></div><div><div class="text-white font-bold text-[15px]">智汇·科创园</div><div class="text-[10px] text-slate-500 mt-0.5">园区运营管理端</div></div></div>
+    <nav class="mt-1">
+      <div class="s-cat">总览</div><a class="s-link" href="admin-dashboard.html"><i class="fa-solid fa-gauge-high"></i>运营驾驶舱</a>
+      <div class="s-cat">资产管理</div><a class="s-link" href="admin-space.html"><i class="fa-regular fa-building"></i>房源资产</a><a class="s-link" href="admin-contracts.html"><i class="fa-solid fa-file-signature"></i>合同中心</a>
+      <div class="s-cat">经营管理</div><a class="s-link" href="admin-billing.html"><i class="fa-solid fa-coins"></i>收租管理</a><a class="s-link" href="admin-meter-manage.html"><i class="fa-solid fa-bolt"></i>水电表管理</a><a class="s-link" href="admin-meter.html"><i class="fa-regular fa-clipboard"></i>抄表录入</a><a class="s-link" href="admin-invoice.html"><i class="fa-solid fa-file-invoice"></i>发票管理</a>
+      <div class="s-cat">服务管理</div><a class="s-link active" href="admin-workorder.html"><i class="fa-solid fa-clipboard-list"></i>工单管理</a><a class="s-link" href="admin-tenants.html"><i class="fa-solid fa-users"></i>企业档案</a><a class="s-link" href="admin-notice.html"><i class="fa-solid fa-bullhorn"></i>公告管理</a>
+    </nav>
+    <div class="s-foot"><i class="fa-regular fa-circle-question mr-1"></i>帮助中心 · v2.4.0</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <a href="admin-workorder.html" class="btn h-9 px-3.5 border border-slate-200 text-slate-600 text-xs rounded-lg"><i class="fa-solid fa-angle-left mr-1"></i>返回</a>
+      <div class="ml-4"><div class="font-bold text-[16px] text-slate-800">新建工单</div><div class="text-[11px] text-slate-400 mt-0.5">手动创建报修工单 · 提交后进入待接单</div></div>
+      <div class="ml-auto flex items-center gap-2.5">
+        <a href="admin-workorder.html" class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg">取消</a>
+        <a href="admin-workorder.html" class="btn h-9 px-4 bg-indigo-600 text-white text-xs rounded-lg"><i class="fa-solid fa-paper-plane mr-1"></i>提交工单</a>
+      </div>
+    </header>
+    <div class="content">
+      <div class="grid grid-cols-3 gap-5">
+        <!-- 左侧：主表单 -->
+        <div class="col-span-2 space-y-5">
+          <!-- 报修位置 & 租户信息 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4 flex items-center gap-2"><i class="fa-solid fa-location-dot text-indigo-500"></i>报修位置 & 租户</div>
+            <div class="grid grid-cols-3 gap-5">
+              <div>
+                <label class="lbl">所属厂房 <span class="text-rose-400">*</span></label>
+                <select class="inp"><option>请选择厂房</option><option>A1栋 · 研发楼</option><option>A3栋 · 制造厂房</option><option>B1栋 · 制造厂房</option><option>B2栋 · 仓储楼</option><option>C栋 · 配套楼</option></select>
+              </div>
+              <div>
+                <label class="lbl">所属楼层 <span class="text-rose-400">*</span></label>
+                <select class="inp"><option>请选择楼层</option><option>1F</option><option>2F</option><option>3F</option><option>4F</option><option>5F</option></select>
+              </div>
+              <div>
+                <label class="lbl">房间编号 <span class="text-rose-400">*</span></label>
+                <select class="inp"><option>请选择房间</option><option>5F-501 · 星驰机器人</option><option>5F-502 · 空置</option><option>4F-401 · 极光新能源</option></select>
+              </div>
+              <div>
+                <label class="lbl">承租企业</label>
+                <input class="inp" value="星驰机器人" readonly>
+              </div>
+              <div>
+                <label class="lbl">联系人</label>
+                <input class="inp" value="李经理" readonly>
+              </div>
+              <div>
+                <label class="lbl">联系电话</label>
+                <input class="inp" value="138-8866-2856" readonly>
+              </div>
+            </div>
+          </div>
+          <!-- 工单信息 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4 flex items-center gap-2"><i class="fa-solid fa-clipboard-list text-indigo-500"></i>工单信息</div>
+            <div class="grid grid-cols-3 gap-5">
+              <div>
+                <label class="lbl">工单来源 <span class="text-rose-400">*</span></label>
+                <select class="inp"><option>请选择来源</option><option>📱 租户小程序报修</option><option>🔍 巡检发现</option><option>⚠️ IoT告警</option><option>📋 合同验收</option></select>
+              </div>
+              <div>
+                <label class="lbl">工单类型 <span class="text-rose-400">*</span></label>
+                <select class="inp"><option>请选择类型</option><option>空调暖通</option><option>水电维修</option><option>门窗维修</option><option>电梯故障</option><option>保洁绿化</option><option>安保消防</option><option>弱电网络</option></select>
+              </div>
+              <div>
+                <label class="lbl">优先级 <span class="text-rose-400">*</span></label>
+                <select class="inp"><option>请选择优先级</option><option>🔥 紧急（SLA 4h）</option><option>一般（SLA 24h）</option></select>
+              </div>
+              <div class="col-span-3">
+                <label class="lbl">问题描述 <span class="text-rose-400">*</span></label>
+                <textarea class="inp" rows="4" placeholder="请详细描述故障现象、影响范围、是否影响生产等…"></textarea>
+              </div>
+              <div class="col-span-3">
+                <label class="lbl">现场照片</label>
+                <div class="flex gap-3">
+                  <div class="w-24 h-24 rounded-lg border-2 border-dashed border-slate-200 flex flex-col items-center justify-center text-slate-300 cursor-pointer hover:border-indigo-400 hover:text-indigo-400 transition-colors"><i class="fa-solid fa-camera text-xl"></i><span class="text-[10px] mt-1">上传照片</span></div>
+                  <div class="w-24 h-24 rounded-lg border-2 border-dashed border-slate-200 flex flex-col items-center justify-center text-slate-300 cursor-pointer hover:border-indigo-400 hover:text-indigo-400 transition-colors"><i class="fa-solid fa-camera text-xl"></i><span class="text-[10px] mt-1">上传照片</span></div>
+                  <div class="w-24 h-24 rounded-lg border-2 border-dashed border-slate-200 flex flex-col items-center justify-center text-slate-300 cursor-pointer hover:border-indigo-400 hover:text-indigo-400 transition-colors"><i class="fa-solid fa-camera text-xl"></i><span class="text-[10px] mt-1">上传照片</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 派单信息 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4 flex items-center gap-2"><i class="fa-solid fa-user-plus text-indigo-500"></i>派单信息（可选 · 提交后自动进入待接单）</div>
+            <div class="grid grid-cols-3 gap-5">
+              <div>
+                <label class="lbl">维修班组</label>
+                <select class="inp"><option>暂不指派（待接单）</option><option>暖通维修组</option><option>设施维修组</option><option>弱电网络组</option><option>保洁绿化组</option><option>安保消防组</option></select>
+              </div>
+              <div>
+                <label class="lbl">指派人</label>
+                <select class="inp"><option>暂不指派</option><option>王工 · 暖通组</option><option>李工 · 设施组</option><option>陈工 · 弱电组</option><option>张姐 · 保洁组</option></select>
+              </div>
+              <div>
+                <label class="lbl">要求完成时间</label>
+                <input class="inp" type="datetime-local">
+              </div>
+              <div class="col-span-3">
+                <label class="lbl">维修备注</label>
+                <textarea class="inp" rows="2" placeholder="给维修人员的备注，如配件准备、入场要求等…"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 右侧：预览 & 提示 -->
+        <div class="space-y-5">
+          <!-- 工单预览 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4 flex items-center gap-2"><i class="fa-solid fa-eye text-indigo-500"></i>工单预览</div>
+            <div class="rounded-xl border border-slate-100 bg-slate-50/50 p-4 space-y-3 text-sm">
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">工单编号</span><span class="font-mono font-semibold text-[11px] text-slate-500">GD-提交后生成</span></div>
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">来源</span><span class="chip bg-violet-50 text-violet-600 !text-[10px]">📱 租户报修</span></div>
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">类型</span><span class="font-medium">空调暖通</span></div>
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">优先级</span><span class="chip bg-rose-50 text-rose-600 !text-[10px]">🔥 紧急</span></div>
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">报修位置</span><span class="font-medium">A1栋 5F-501</span></div>
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">承租企业</span><span class="font-medium">星驰机器人</span></div>
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">提交后状态</span><span class="chip bg-amber-50 text-amber-600 !text-[10px]">待接单</span></div>
+            </div>
+          </div>
+          <!-- 流程提示 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4 flex items-center gap-2"><i class="fa-solid fa-route text-indigo-500"></i>工单流转</div>
+            <div class="space-y-2.5 text-xs">
+              <div class="flex items-center gap-2 text-slate-500"><span class="w-5 h-5 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-[10px]">1</span>提交 → 待接单</div>
+              <div class="flex items-center gap-2 text-slate-500"><span class="w-5 h-5 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-[10px]">2</span>接单 → 派单给维修班组</div>
+              <div class="flex items-center gap-2 text-slate-500"><span class="w-5 h-5 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-[10px]">3</span>维修员到场 → 处理中</div>
+              <div class="flex items-center gap-2 text-slate-500"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-[10px]">4</span>完工提交 → 待验收</div>
+              <div class="flex items-center gap-2 text-slate-500"><span class="w-5 h-5 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-[10px]">5</span>验收通过 → 租户评价 → 归档</div>
+            </div>
+            <div class="mt-4 p-3 rounded-lg bg-amber-50/50 text-[11px] text-amber-600"><i class="fa-solid fa-triangle-exclamation mr-1"></i>紧急工单 SLA 4 小时，一般工单 SLA 24 小时，超时自动升级。</div>
+          </div>
+          <!-- SLA 规则 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-3">SLA 响应规则</div>
+            <div class="space-y-2 text-xs">
+              <div class="flex justify-between items-center p-2 rounded-lg bg-rose-50/50"><span class="text-rose-600 font-medium">🔥 紧急</span><span class="text-rose-500">4h 内到场</span></div>
+              <div class="flex justify-between items-center p-2 rounded-lg bg-slate-50"><span class="text-slate-600 font-medium">一般</span><span class="text-slate-500">24h 内到场</span></div>
+            </div>
+            <div class="text-[11px] text-slate-400 mt-3">超时未响应自动升级至主管</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

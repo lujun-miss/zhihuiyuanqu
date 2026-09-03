@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>企业详情 · 智慧园区管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body class="web">
+  <aside class="sidebar">
+    <div class="s-logo"><div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm"><i class="fa-solid fa-industry"></i></div><div><div class="text-white font-bold text-[15px]">智汇·科创园</div><div class="text-[10px] text-slate-500 mt-0.5">园区运营管理端</div></div></div>
+    <nav class="mt-1">
+      <div class="s-cat">总览</div><a class="s-link" href="admin-dashboard.html"><i class="fa-solid fa-gauge-high"></i>运营驾驶舱</a>
+      <div class="s-cat">资产管理</div><a class="s-link" href="admin-space.html"><i class="fa-regular fa-building"></i>房源资产</a><a class="s-link" href="admin-contracts.html"><i class="fa-solid fa-file-signature"></i>合同中心</a>
+      <div class="s-cat">经营管理</div><a class="s-link" href="admin-billing.html"><i class="fa-solid fa-coins"></i>收租管理</a><a class="s-link" href="admin-meter-manage.html"><i class="fa-solid fa-bolt"></i>水电表管理</a><a class="s-link" href="admin-meter.html"><i class="fa-regular fa-clipboard"></i>抄表录入</a><a class="s-link" href="admin-invoice.html"><i class="fa-solid fa-file-invoice"></i>发票管理</a>
+      <div class="s-cat">服务管理</div><a class="s-link" href="admin-workorder.html"><i class="fa-solid fa-clipboard-list"></i>工单管理</a><a class="s-link active" href="admin-tenants.html"><i class="fa-solid fa-users"></i>企业档案</a><a class="s-link" href="admin-notice.html"><i class="fa-solid fa-bullhorn"></i>公告管理</a>
+    </nav>
+    <div class="s-foot"><i class="fa-regular fa-circle-question mr-1"></i>帮助中心 · v2.4.0</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <a href="admin-tenants.html" class="btn h-9 px-3.5 border border-slate-200 text-slate-600 text-xs rounded-lg"><i class="fa-solid fa-angle-left mr-1"></i>返回</a>
+      <div class="ml-4"><div class="font-bold text-[16px] text-slate-800">企业详情</div><div class="text-[11px] text-slate-400 mt-0.5">晨阳精密制造有限公司</div></div>
+      <div class="ml-auto flex items-center gap-2.5">
+        <div class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg"><i class="fa-solid fa-file-pdf mr-1"></i>档案</div>
+        <div class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg">合同</div>
+        <div class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg">催缴</div>
+        <div class="btn h-9 px-4 bg-indigo-600 text-white text-xs rounded-lg">编辑</div>
+      </div>
+    </header>
+    <div class="content">
+      <div class="wcard p-5 flex items-center gap-4">
+        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-2xl font-bold">晨</div>
+        <div><div class="font-bold text-slate-800 text-lg">晨阳精密制造有限公司</div><div class="text-xs text-slate-400 mt-1">精密制造 · 入驻 2 年 · 信用等级 A</div></div>
+        <div class="ml-auto flex gap-2"><span class="chip bg-emerald-50 text-emerald-600 !text-sm !py-2 !px-3.5">正常在租</span><span class="chip bg-indigo-50 text-indigo-600 !text-sm !py-2 !px-3.5">信用 A</span></div>
+      </div>
+      <!-- KPI -->
+      <div class="grid grid-cols-4 gap-4 mt-4">
+        <div class="wcard p-4 text-center"><div class="text-xs text-slate-400">租赁面积</div><div class="text-xl font-bold mt-1.5">580㎡</div></div>
+        <div class="wcard p-4 text-center"><div class="text-xs text-slate-400">月租金</div><div class="text-xl font-bold mt-1.5">¥19,600</div></div>
+        <div class="wcard p-4 text-center"><div class="text-xs text-slate-400">本年已缴</div><div class="text-xl font-bold mt-1.5 text-emerald-500">¥236,400</div></div>
+        <div class="wcard p-4 text-center"><div class="text-xs text-slate-400">待缴金额</div><div class="text-xl font-bold mt-1.5 text-rose-500">¥12,860</div></div>
+      </div>
+      <div class="grid grid-cols-3 gap-4 mt-4">
+        <div class="col-span-2 space-y-4">
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4">企业基本信息</div>
+            <div class="grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
+              <div><span class="text-slate-400 text-xs">企业名称</span><div class="font-medium mt-0.5">晨阳精密制造有限公司</div></div>
+              <div><span class="text-slate-400 text-xs">统一信用代码</span><div class="font-medium mt-0.5">91320105MA2X8K7Q1D</div></div>
+              <div><span class="text-slate-400 text-xs">法定代表人</span><div class="font-medium mt-0.5">李明远</div></div>
+              <div><span class="text-slate-400 text-xs">联系电话</span><div class="font-medium mt-0.5">138-8866-2856</div></div>
+              <div><span class="text-slate-400 text-xs">所属行业</span><div class="font-medium mt-0.5">精密制造</div></div>
+              <div><span class="text-slate-400 text-xs">企业规模</span><div class="font-medium mt-0.5">50-100人</div></div>
+              <div><span class="text-slate-400 text-xs">入驻日期</span><div class="font-medium mt-0.5">2024-08-01</div></div>
+              <div><span class="text-slate-400 text-xs">合同到期</span><div class="font-medium mt-0.5">2028-09-30</div></div>
+            </div>
+          </div>
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4">缴费记录</div>
+            <table class="dt"><thead><tr><th>账单月份</th><th>金额</th><th>缴费时间</th><th>缴费方式</th><th>状态</th></tr></thead>
+            <tbody>
+              <tr><td>2026年8月</td><td class="font-bold">¥22,500</td><td>08-04</td><td>微信支付</td><td><span class="chip bg-emerald-50 text-emerald-600">已缴清</span></td></tr>
+              <tr><td>2026年7月</td><td class="font-bold">¥22,500</td><td>07-05</td><td>微信支付</td><td><span class="chip bg-emerald-50 text-emerald-600">已缴清</span></td></tr>
+              <tr><td>2026年6月</td><td class="font-bold">¥22,500</td><td>06-08</td><td>微信支付</td><td><span class="chip bg-emerald-50 text-emerald-600">已缴清</span></td></tr>
+              <tr><td>2026年5月</td><td class="font-bold">¥22,500</td><td>05-12</td><td>银行转账</td><td><span class="chip bg-amber-50 text-amber-600">逾期 7天</span></td></tr>
+            </tbody></table>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4">租赁信息</div>
+            <div class="space-y-3 text-sm">
+              <div><span class="text-slate-400 text-xs">租赁房源</span><div class="font-medium mt-0.5">A3栋 2层 201</div></div>
+              <div><span class="text-slate-400 text-xs">合同编号</span><div class="font-medium mt-0.5 text-indigo-500">HT-2026-0815-003</div></div>
+              <div><span class="text-slate-400 text-xs">月租金</span><div class="font-medium mt-0.5">¥19,600</div></div>
+              <div><span class="text-slate-400 text-xs">物业费</span><div class="font-medium mt-0.5">¥2,900/月</div></div>
+              <div><span class="text-slate-400 text-xs">租期</span><div class="font-medium mt-0.5">2024.08 - 2028.09</div></div>
+            </div>
+          </div>
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4">门禁卡</div>
+            <div class="space-y-2 text-sm">
+              <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50"><div><div class="font-medium">AC-2023-0186</div><div class="text-[11px] text-slate-400">张工 · A3栋全楼层</div></div><span class="chip bg-amber-50 text-amber-600 !text-xs">即将到期</span></div>
+              <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50"><div><div class="font-medium">AC-2023-0187</div><div class="text-[11px] text-slate-400">李工 · A3栋 2F</div></div><span class="chip bg-emerald-50 text-emerald-600 !text-xs">有效</span></div>
+            </div>
+          </div>
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-3">工单记录</div>
+            <div class="space-y-2 text-xs">
+              <div class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50"><i class="fa-solid fa-screwdriver-wrench text-orange-400"></i><span class="text-slate-600 flex-1">空调不制冷</span><span class="chip bg-amber-50 text-amber-600">处理中</span></div>
+              <div class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50"><i class="fa-solid fa-bolt text-sky-400"></i><span class="text-slate-600 flex-1">电路跳闸</span><span class="chip bg-emerald-50 text-emerald-600">已完工</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

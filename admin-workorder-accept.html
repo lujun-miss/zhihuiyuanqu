@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>工单验收 · 智慧园区管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body class="web">
+  <aside class="sidebar">
+    <div class="s-logo"><div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm"><i class="fa-solid fa-industry"></i></div><div><div class="text-white font-bold text-[15px]">智汇·科创园</div><div class="text-[10px] text-slate-500 mt-0.5">园区运营管理端</div></div></div>
+    <nav class="mt-1">
+      <div class="s-cat">总览</div><a class="s-link" href="admin-dashboard.html"><i class="fa-solid fa-gauge-high"></i>运营驾驶舱</a>
+      <div class="s-cat">资产管理</div><a class="s-link" href="admin-space.html"><i class="fa-regular fa-building"></i>房源资产</a><a class="s-link" href="admin-contracts.html"><i class="fa-solid fa-file-signature"></i>合同中心</a>
+      <div class="s-cat">经营管理</div><a class="s-link" href="admin-billing.html"><i class="fa-solid fa-coins"></i>收租管理</a><a class="s-link" href="admin-meter-manage.html"><i class="fa-solid fa-bolt"></i>水电表管理</a><a class="s-link" href="admin-meter.html"><i class="fa-regular fa-clipboard"></i>抄表录入</a><a class="s-link" href="admin-invoice.html"><i class="fa-solid fa-file-invoice"></i>发票管理</a>
+      <div class="s-cat">服务管理</div><a class="s-link active" href="admin-workorder.html"><i class="fa-solid fa-clipboard-list"></i>工单管理</a><a class="s-link" href="admin-tenants.html"><i class="fa-solid fa-users"></i>企业档案</a><a class="s-link" href="admin-notice.html"><i class="fa-solid fa-bullhorn"></i>公告管理</a>
+    </nav>
+    <div class="s-foot"><i class="fa-regular fa-circle-question mr-1"></i>帮助中心 · v2.4.0</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <a href="admin-workorder.html" class="btn h-9 px-3.5 border border-slate-200 text-slate-600 text-xs rounded-lg"><i class="fa-solid fa-angle-left mr-1"></i>返回</a>
+      <div class="ml-4"><div class="font-bold text-[16px] text-slate-800">工单验收</div><div class="text-[11px] text-slate-400 mt-0.5">GD-20260831-03 · 维修员已完工 · 等待验收</div></div>
+      <div class="ml-auto flex items-center gap-2.5">
+        <a href="admin-workorder-detail.html" class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg"><i class="fa-solid fa-eye mr-1"></i>查看工单详情</a>
+        <a href="admin-workorder.html" class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg">取消</a>
+        <a href="admin-workorder.html" class="btn h-9 px-4 bg-emerald-600 text-white text-xs rounded-lg"><i class="fa-solid fa-check mr-1"></i>确认验收</a>
+      </div>
+    </header>
+    <div class="content">
+      <div class="grid grid-cols-3 gap-5">
+        <!-- 左侧：工单信息(只读) + 维修完工反馈(只读) + 验收表单 -->
+        <div class="col-span-2 space-y-5">
+          <!-- 工单信息（只读） -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4 flex items-center gap-2"><i class="fa-solid fa-clipboard text-indigo-500"></i>工单信息</div>
+            <div class="grid grid-cols-3 gap-5">
+              <div>
+                <label class="lbl">工单编号</label>
+                <input class="inp" value="GD-20260831-03" readonly>
+              </div>
+              <div>
+                <label class="lbl">来源</label>
+                <input class="inp" value="📱 租户小程序报修" readonly>
+              </div>
+              <div>
+                <label class="lbl">优先级</label>
+                <input class="inp" value="一般（SLA 24h）" readonly>
+              </div>
+              <div>
+                <label class="lbl">工单类型</label>
+                <input class="inp" value="水电维修" readonly>
+              </div>
+              <div>
+                <label class="lbl">提交时间</label>
+                <input class="inp" value="08-31 14:00" readonly>
+              </div>
+              <div>
+                <label class="lbl">完工时间</label>
+                <input class="inp" value="08-31 17:30" readonly style="color:#059669">
+              </div>
+              <div>
+                <label class="lbl">所属厂房</label>
+                <input class="inp" value="B1栋 · 制造厂房" readonly>
+              </div>
+              <div>
+                <label class="lbl">所属楼层</label>
+                <input class="inp" value="3F" readonly>
+              </div>
+              <div>
+                <label class="lbl">房间编号</label>
+                <input class="inp" value="3F-302 · 蓝湾生物科技" readonly>
+              </div>
+              <div>
+                <label class="lbl">承租企业</label>
+                <input class="inp" value="蓝湾生物科技" readonly>
+              </div>
+              <div>
+                <label class="lbl">联系人</label>
+                <input class="inp" value="赵主管" readonly>
+              </div>
+              <div>
+                <label class="lbl">联系电话</label>
+                <input class="inp" value="139-2233-7788" readonly>
+              </div>
+              <div class="col-span-3">
+                <label class="lbl">问题描述</label>
+                <textarea class="inp" rows="2" readonly>卫生间水管漏水，水已渗到地面，影响正常使用。</textarea>
+              </div>
+            </div>
+          </div>
+          <!-- 维修完工反馈（只读） -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4 flex items-center gap-2"><i class="fa-solid fa-screwdriver-wrench text-emerald-500"></i>维修完工反馈</div>
+            <div class="grid grid-cols-3 gap-5">
+              <div>
+                <label class="lbl">维修班组</label>
+                <input class="inp" value="设施维修组" readonly>
+              </div>
+              <div>
+                <label class="lbl">维修人</label>
+                <input class="inp" value="李工" readonly>
+              </div>
+              <div>
+                <label class="lbl">到场时间</label>
+                <input class="inp" value="08-31 14:30" readonly>
+              </div>
+              <div>
+                <label class="lbl">完工时间</label>
+                <input class="inp" value="08-31 17:30" readonly>
+              </div>
+              <div>
+                <label class="lbl">维修用时</label>
+                <input class="inp" value="3 小时" readonly>
+              </div>
+              <div>
+                <label class="lbl">SLA 达成</label>
+                <input class="inp" value="✓ 准时完工" readonly style="color:#059669">
+              </div>
+              <div class="col-span-3">
+                <label class="lbl">维修说明</label>
+                <textarea class="inp" rows="3" readonly>更换卫生间进水管接口处的老化密封垫圈，重新紧固接头，测试 30 分钟无渗漏。建议定期检查管道接口，老化垫圈建议 2 年更换一次。</textarea>
+              </div>
+              <div class="col-span-3">
+                <label class="lbl">完工照片</label>
+                <div class="flex gap-3">
+                  <div class="w-24 h-24 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400"><i class="fa-regular fa-image text-xl"></i></div>
+                  <div class="w-24 h-24 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400"><i class="fa-regular fa-image text-xl"></i></div>
+                  <div class="w-24 h-24 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400"><i class="fa-regular fa-image text-xl"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 验收表单 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4 flex items-center gap-2"><i class="fa-solid fa-clipboard-check text-emerald-500"></i>验收信息</div>
+            <div class="grid grid-cols-3 gap-5">
+              <div>
+                <label class="lbl">验收结果 <span class="text-rose-400">*</span></label>
+                <select class="inp"><option>请选择验收结果</option><option>✅ 验收通过</option><option>❌ 验收不通过（需返工）</option></select>
+              </div>
+              <div>
+                <label class="lbl">验收人</label>
+                <input class="inp" value="运营管理员" readonly>
+              </div>
+              <div>
+                <label class="lbl">验收时间</label>
+                <input class="inp" type="datetime-local">
+              </div>
+              <div class="col-span-3">
+                <label class="lbl">验收意见</label>
+                <textarea class="inp" rows="3" placeholder="验收意见，如维修质量是否达标、现场是否清理干净等…"></textarea>
+              </div>
+              <div class="col-span-3">
+                <label class="lbl">是否产生维修费用</label>
+                <div class="flex gap-4 mt-1">
+                  <label class="flex items-center gap-1.5 text-xs text-slate-600"><input type="radio" name="cost" checked class="accent-indigo-500"> 计入企业当月账单</label>
+                  <label class="flex items-center gap-1.5 text-xs text-slate-600"><input type="radio" name="cost" class="accent-indigo-500"> 园区承担（公共区域维修）</label>
+                  <label class="flex items-center gap-1.5 text-xs text-slate-600"><input type="radio" name="cost" class="accent-indigo-500"> 免费保修期内</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 右侧：费用明细 & 流程 -->
+        <div class="space-y-5">
+          <!-- 费用明细 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-3 flex items-center gap-2"><i class="fa-solid fa-receipt text-indigo-500"></i>费用明细</div>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between"><span class="text-slate-400">人工费（3h）</span><span class="font-medium">¥240</span></div>
+              <div class="flex justify-between"><span class="text-slate-400">配件费（密封垫圈×2）</span><span class="font-medium">¥80</span></div>
+              <div class="flex justify-between"><span class="text-slate-400">材料费</span><span class="font-medium">¥40</span></div>
+              <div class="flex justify-between border-t border-slate-100 pt-2"><span class="font-bold">合计</span><span class="font-bold text-indigo-600">¥360</span></div>
+            </div>
+            <div class="text-[11px] text-slate-400 mt-2"><a href="admin-billing.html" class="text-indigo-500">→ 验收通过后计入蓝湾生物 9月账单</a></div>
+          </div>
+          <!-- 工单预览 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4 flex items-center gap-2"><i class="fa-solid fa-eye text-indigo-500"></i>工单预览</div>
+            <div class="rounded-xl border border-slate-100 bg-slate-50/50 p-4 space-y-3 text-sm">
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">工单编号</span><span class="font-mono font-semibold text-[11px] text-slate-500">GD-20260831-03</span></div>
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">类型</span><span class="font-medium">水电维修</span></div>
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">报修位置</span><span class="font-medium">B1栋 3F-302</span></div>
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">承租企业</span><span class="font-medium">蓝湾生物科技</span></div>
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">维修人</span><span class="font-medium">李工 · 设施组</span></div>
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">维修用时</span><span class="font-medium">3 小时</span></div>
+              <div class="flex items-center justify-between"><span class="text-xs text-slate-400">SLA 达成</span><span class="chip bg-emerald-50 text-emerald-600 !text-[10px]">✓ 准时</span></div>
+              <div class="border-t border-slate-200 pt-3 flex items-center justify-between"><span class="text-xs text-slate-400">验收后状态</span><span class="chip bg-emerald-50 text-emerald-600 !text-[10px]">已完成</span></div>
+            </div>
+          </div>
+          <!-- 流转进度 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-3">流转进度</div>
+            <div class="space-y-2.5 text-xs">
+              <div class="flex items-center gap-2 text-emerald-600"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-[10px]">1</span>提交 ✓ <span class="text-[10px] text-slate-400 ml-auto">08-31 14:00</span></div>
+              <div class="flex items-center gap-2 text-emerald-600"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-[10px]">2</span>派单 ✓ <span class="text-[10px] text-slate-400 ml-auto">14:10</span></div>
+              <div class="flex items-center gap-2 text-emerald-600"><span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-[10px]">3</span>处理 ✓ <span class="text-[10px] text-slate-400 ml-auto">17:30</span></div>
+              <div class="flex items-center gap-2 text-indigo-600 font-medium"><span class="w-5 h-5 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-[10px]">4</span>完工·验收 ← 当前</div>
+              <div class="flex items-center gap-2 text-slate-400"><span class="w-5 h-5 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center font-bold text-[10px]">5</span>评价·归档</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

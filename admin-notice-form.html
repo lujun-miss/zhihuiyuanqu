@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>新建公告 · 智慧园区管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body class="web">
+  <aside class="sidebar">
+    <div class="s-logo">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm"><i class="fa-solid fa-industry"></i></div>
+      <div><div class="text-white font-bold text-[15px]">智汇·科创园</div><div class="text-[10px] text-slate-500 mt-0.5">园区运营管理端</div></div>
+    </div>
+    <nav class="mt-1">
+      <div class="s-cat">总览</div>
+      <a class="s-link" href="admin-dashboard.html"><i class="fa-solid fa-gauge-high"></i>运营驾驶舱</a>
+      <div class="s-cat">资产管理</div>
+      <a class="s-link" href="admin-space.html"><i class="fa-regular fa-building"></i>房源资产</a>
+      <a class="s-link" href="admin-contracts.html"><i class="fa-solid fa-file-signature"></i>合同中心</a>
+      <div class="s-cat">经营管理</div>
+      <a class="s-link" href="admin-billing.html"><i class="fa-solid fa-coins"></i>收租管理</a>
+      <a class="s-link" href="admin-meter-manage.html"><i class="fa-solid fa-bolt"></i>水电表管理</a>
+      <a class="s-link" href="admin-meter.html"><i class="fa-regular fa-clipboard"></i>抄表录入</a>
+      <a class="s-link" href="admin-invoice.html"><i class="fa-solid fa-file-invoice"></i>发票管理</a>
+      <div class="s-cat">服务管理</div>
+      <a class="s-link" href="admin-workorder.html"><i class="fa-solid fa-clipboard-list"></i>工单管理</a>
+      <a class="s-link" href="admin-tenants.html"><i class="fa-solid fa-users"></i>企业档案</a>
+      <a class="s-link active" href="admin-notice.html"><i class="fa-solid fa-bullhorn"></i>公告管理</a>
+    </nav>
+    <div class="s-foot"><i class="fa-regular fa-circle-question mr-1"></i>帮助中心 · v2.4.0</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <a href="admin-notice.html" class="btn h-9 px-3.5 border border-slate-200 text-slate-600 text-xs rounded-lg"><i class="fa-solid fa-angle-left mr-1"></i>返回</a>
+      <div class="ml-4"><div class="font-bold text-[16px] text-slate-800">新建公告</div><div class="text-[11px] text-slate-400 mt-0.5">推送到租户小程序首页 · 支持定时发布</div></div>
+      <div class="ml-auto flex items-center gap-2.5">
+        <div class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg">保存草稿</div>
+        <div class="btn h-9 px-4 bg-indigo-600 text-white text-xs rounded-lg">立即发布</div>
+      </div>
+    </header>
+    <div class="content max-w-3xl">
+      <form class="wcard p-6 space-y-5">
+        <div><label class="lbl">公告标题</label><input class="inp text-base font-medium" placeholder="请输入公告标题" value="中秋国庆双节园区车辆通行安排的通知"></div>
+        <div class="grid grid-cols-3 gap-4">
+          <div><label class="lbl">公告类型</label><select class="inp"><option>运营通知</option><option>安全公告</option><option>设施维护</option><option>活动公告</option><option>政策法规</option></select></div>
+          <div><label class="lbl">发布方式</label><select class="inp"><option>立即发布</option><option>定时发布</option></select></div>
+          <div><label class="lbl">定时发布时间</label><input type="datetime-local" class="inp" value="2026-09-05T09:00"></div>
+        </div>
+        <div><label class="lbl">推送范围</label><div class="flex flex-wrap gap-2 mt-1.5"><span class="chip bg-indigo-50 text-indigo-600 cursor-pointer">全部租户</span><span class="chip bg-white border border-slate-200 text-slate-400 cursor-pointer">A1栋</span><span class="chip bg-white border border-slate-200 text-slate-400 cursor-pointer">A3栋</span><span class="chip bg-white border border-slate-200 text-slate-400 cursor-pointer">B1栋</span><span class="chip bg-white border border-slate-200 text-slate-400 cursor-pointer">B2栋</span></div></div>
+        <div>
+          <label class="lbl">公告内容</label>
+          <div class="mt-1.5 border border-slate-200 rounded-xl overflow-hidden">
+            <div class="px-3 py-2 border-b border-slate-100 flex items-center gap-3 text-slate-400 text-xs"><i class="fa-solid fa-bold"></i><i class="fa-solid fa-italic"></i><i class="fa-solid fa-underline"></i><i class="fa-solid fa-list-ul"></i><i class="fa-solid fa-link"></i><i class="fa-regular fa-image"></i></div>
+            <textarea rows="8" class="w-full px-4 py-3 text-sm text-slate-700 outline-none resize-none" placeholder="请输入公告内容…">各位租户企业：
+
+中秋国庆双节将至，为确保园区节假日期间的车辆通行秩序与安全，现将通行安排通知如下：
+
+1. 9月29日至10月6日期间，访客车辆需提前在小程序预约。
+2. 园区地面车位实行先到先停，地下车库仅限月卡车辆通行。
+3. 货运车辆通行时间调整为 8:00-18:00。
+
+请各企业提前做好安排，如有疑问请联系物业服务中心。
+
+智汇·科创园 运营中心</textarea>
+          </div>
+        </div>
+        <div><label class="lbl">附件</label><div class="flex gap-3 mt-1.5"><div class="px-4 py-3 rounded-xl bg-slate-50 border-2 border-dashed border-slate-300 flex items-center gap-2 text-xs text-slate-400 cursor-pointer"><i class="fa-solid fa-plus"></i>上传附件</div></div></div>
+        <div class="flex items-center gap-2 bg-amber-50/50 rounded-xl p-3.5 text-xs text-slate-500"><i class="fa-regular fa-square text-amber-400 mr-1"></i>置顶至首页公告位 <span class="text-slate-400 ml-1">（公告将显示在租户小程序首页顶部）</span></div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

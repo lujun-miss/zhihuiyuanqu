@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>05 收银台 · 智慧园区</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="screen">
+  <div class="statusbar"><span>9:41</span><span class="space-x-1.5"><i class="fa-solid fa-signal text-xs"></i><i class="fa-solid fa-wifi text-xs"></i><i class="fa-solid fa-battery-three-quarters text-sm"></i></span></div>
+  <div class="navbar"><a href="billing.html" class="pl-2"><i class="fa-solid fa-angle-left text-lg"></i></a><span>收银台</span><i class="fa-solid fa-ellipsis"></i></div>
+  <div class="scroll hsb px-4 pb-4">
+    <!-- 金额 -->
+    <div class="text-center pt-4 pb-6">
+      <div class="text-xs text-slate-400">需付金额（4 笔账单）</div>
+      <div class="text-4xl font-bold mt-2">¥12,860.00</div>
+      <div class="text-[11px] text-slate-400 mt-2">晨阳精密制造有限公司 · 2026年9月</div>
+    </div>
+    <!-- 明细 -->
+    <div class="card p-4">
+      <div class="flex justify-between text-[13px] py-1"><span class="text-slate-500">厂房租金 2026年9月</span><span>¥9,100.00</span></div>
+      <div class="flex justify-between text-[13px] py-1"><span class="text-slate-500">物业管理费 2026年9月</span><span>¥1,560.00</span></div>
+      <div class="flex justify-between text-[13px] py-1"><span class="text-slate-500">电费 2026年8月</span><span>¥1,850.00</span></div>
+      <div class="flex justify-between text-[13px] py-1"><span class="text-slate-500">水费 2026年8月</span><span>¥350.00</span></div>
+      <div class="flex justify-between text-sm font-bold pt-2.5 mt-1.5 border-t border-slate-100"><span>合计</span><span class="text-indigo-600">¥12,860.00</span></div>
+    </div>
+    <!-- 支付方式 -->
+    <div class="card mt-3 p-4 flex items-center gap-3">
+      <div class="itile bg-emerald-50 text-emerald-500"><i class="fa-brands fa-weixin text-xl"></i></div>
+      <div class="flex-1"><div class="text-sm font-semibold">微信支付</div><div class="text-[11px] text-slate-400 mt-0.5">小程序内直接唤起，支付后自动核销</div></div>
+      <i class="fa-solid fa-circle-check text-emerald-500 text-lg"></i>
+    </div>
+    <p class="text-[11px] text-slate-400 mt-3 px-1 flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-500"></i>支付由微信支付提供安全保障，完成后自动核销并生成电子回单</p>
+  </div>
+  <div class="flex-shrink-0 p-4 bg-white border-t border-slate-100">
+    <div class="btn bg-indigo-600 text-white">立即支付 ¥12,860.00</div>
+  </div>
+</div>
+</body>
+</html>

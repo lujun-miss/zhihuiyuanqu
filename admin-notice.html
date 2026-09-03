@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>公告管理 · 智慧园区管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body class="web">
+  <aside class="sidebar">
+    <div class="s-logo">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm"><i class="fa-solid fa-industry"></i></div>
+      <div><div class="text-white font-bold text-[15px]">智汇·科创园</div><div class="text-[10px] text-slate-500 mt-0.5">园区运营管理端</div></div>
+    </div>
+    <nav class="mt-1">
+      <div class="s-cat">总览</div>
+      <a class="s-link" href="admin-dashboard.html"><i class="fa-solid fa-gauge-high"></i>运营驾驶舱</a>
+      <div class="s-cat">资产管理</div>
+      <a class="s-link" href="admin-space.html"><i class="fa-regular fa-building"></i>房源资产</a>
+      <a class="s-link" href="admin-contracts.html"><i class="fa-solid fa-file-signature"></i>合同中心</a>
+      <div class="s-cat">经营管理</div>
+      <a class="s-link" href="admin-billing.html"><i class="fa-solid fa-coins"></i>收租管理</a>
+      <a class="s-link" href="admin-meter-manage.html"><i class="fa-solid fa-bolt"></i>水电表管理</a>
+      <a class="s-link" href="admin-meter.html"><i class="fa-regular fa-clipboard"></i>抄表录入</a>
+      <a class="s-link" href="admin-invoice.html"><i class="fa-solid fa-file-invoice"></i>发票管理</a>
+      <div class="s-cat">服务管理</div>
+      <a class="s-link" href="admin-workorder.html"><i class="fa-solid fa-clipboard-list"></i>工单管理</a>
+      <a class="s-link" href="admin-tenants.html"><i class="fa-solid fa-users"></i>企业档案</a>
+      <a class="s-link active" href="admin-notice.html"><i class="fa-solid fa-bullhorn"></i>公告管理</a>
+    </nav>
+    <div class="s-foot"><i class="fa-regular fa-circle-question mr-1"></i>帮助中心 · v2.4.0</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div>
+        <div class="font-bold text-[16px] text-slate-800">公告管理</div>
+        <div class="text-[11px] text-slate-400 mt-0.5">推送至租户小程序首页 · 支持定时发布</div>
+      </div>
+      <div class="ml-auto flex items-center gap-2.5">
+        <div class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg"><i class="fa-solid fa-download mr-1"></i>导出</div>
+        <a href="admin-notice-form.html" class="btn h-9 px-4 bg-indigo-600 text-white text-xs rounded-lg"><i class="fa-solid fa-plus mr-1"></i>新建公告</a>
+      </div>
+    </header>
+    <div class="content">
+      <!-- KPI -->
+      <div class="grid grid-cols-4 gap-4">
+        <div class="wcard p-5"><div class="flex items-center justify-between"><span class="text-xs text-slate-400">已发布公告</span><span class="w-9 h-9 rounded-xl bg-indigo-50 text-indigo-500 flex items-center justify-center"><i class="fa-solid fa-bullhorn"></i></span></div><div class="text-2xl font-bold mt-2">86 条</div><div class="text-[11px] text-slate-400 mt-1.5">本月发布 4 条</div></div>
+        <div class="wcard p-5"><div class="flex items-center justify-between"><span class="text-xs text-slate-400">草稿箱</span><span class="w-9 h-9 rounded-xl bg-slate-100 text-slate-500 flex items-center justify-center"><i class="fa-solid fa-pen-to-square"></i></span></div><div class="text-2xl font-bold mt-2">2 条</div><div class="text-[11px] text-slate-400 mt-1.5">最近编辑 08-30</div></div>
+        <div class="wcard p-5"><div class="flex items-center justify-between"><span class="text-xs text-slate-400">本月阅读量</span><span class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-500 flex items-center justify-center"><i class="fa-solid fa-eye"></i></span></div><div class="text-2xl font-bold mt-2">3,286 次</div><div class="text-[11px] text-slate-400 mt-1.5">阅读率 78%</div></div>
+        <div class="wcard p-5"><div class="flex items-center justify-between"><span class="text-xs text-slate-400">定时发布</span><span class="w-9 h-9 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center"><i class="fa-regular fa-clock"></i></span></div><div class="text-2xl font-bold mt-2">1 条</div><div class="text-[11px] text-slate-400 mt-1.5">09-05 09:00 自动推送</div></div>
+      </div>
+      <!-- 公告列表 -->
+      <div class="wcard mt-4 overflow-hidden">
+        <div class="p-5 pb-3 flex items-center gap-2 flex-wrap">
+          <span class="font-bold text-slate-800 mr-2">公告列表</span>
+          <span class="chip bg-indigo-600 text-white !text-xs !py-2 !px-3.5">全部 88</span>
+          <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">已发布 86</span>
+          <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">草稿 2</span>
+          <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5 ml-auto"><i class="fa-solid fa-arrow-down-wide-short"></i> 按发布时间</span>
+        </div>
+        <table class="dt">
+          <thead><tr><th>公告标题</th><th>类型</th><th>发布人</th><th>发布时间</th><th>阅读量</th><th>置顶</th><th>状态</th><th>操作</th></tr></thead>
+          <tbody>
+            <tr><td class="font-semibold">中秋国庆双节园区车辆通行安排的通知</td><td><span class="chip bg-amber-50 text-amber-600">运营通知</span></td><td>园区运营中心</td><td>09-01 09:00</td><td>286</td><td><i class="fa-solid fa-thumbtack text-rose-500"></i></td><td><span class="chip bg-emerald-50 text-emerald-600">已发布</span></td><td><a href="admin-notice-form.html" class="text-indigo-500 font-medium">编辑 · 撤回</a></td></tr>
+            <tr><td class="font-semibold">关于 9 月消防设施年度检测的公告</td><td><span class="chip bg-rose-50 text-rose-600">安全公告</span></td><td>安保部</td><td>08-28 14:00</td><td>342</td><td>—</td><td><span class="chip bg-emerald-50 text-emerald-600">已发布</span></td><td><a href="admin-notice-form.html" class="text-indigo-500 font-medium">编辑 · 撤回</a></td></tr>
+            <tr><td class="font-semibold">A3 栋电梯维保停梯通知</td><td><span class="chip bg-sky-50 text-sky-600">设施维护</span></td><td>工程部</td><td>08-25 10:30</td><td>198</td><td>—</td><td><span class="chip bg-emerald-50 text-emerald-600">已发布</span></td><td><a href="admin-notice-form.html" class="text-indigo-500 font-medium">编辑 · 撤回</a></td></tr>
+            <tr><td class="font-semibold">9 月园区活动：企业家沙龙报名</td><td><span class="chip bg-violet-50 text-violet-600">活动公告</span></td><td>运营中心</td><td>08-22 16:00</td><td>426</td><td>—</td><td><span class="chip bg-emerald-50 text-emerald-600">已发布</span></td><td><a href="admin-notice-form.html" class="text-indigo-500 font-medium">编辑 · 撤回</a></td></tr>
+            <tr><td class="font-semibold">关于调整水电费单价的通知（草稿）</td><td><span class="chip bg-amber-50 text-amber-600">运营通知</span></td><td>财务部</td><td>—</td><td>—</td><td>—</td><td><span class="chip bg-slate-100 text-slate-400">草稿</span></td><td><a href="admin-notice-form.html" class="text-indigo-500 font-medium">编辑 · 发布</a></td></tr>
+            <tr><td class="font-semibold">国庆假期园区值班安排（定时）</td><td><span class="chip bg-amber-50 text-amber-600">运营通知</span></td><td>运营中心</td><td>09-05 09:00</td><td>—</td><td>—</td><td><span class="chip bg-amber-50 text-amber-600">定时发布</span></td><td><a href="admin-notice-form.html" class="text-indigo-500 font-medium">编辑 · 取消</a></td></tr>
+          </tbody>
+        </table>
+        <div class="p-4 flex items-center justify-between text-xs text-slate-400 border-t border-slate-100">
+          <span>显示 1-6 条 · 共 88 条</span>
+          <div class="flex items-center gap-1"><span class="px-2.5 py-1.5"><i class="fa-solid fa-angle-left"></i></span><span class="px-2.5 py-1.5 rounded-md bg-indigo-50 text-indigo-600 font-semibold">1</span><span class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 cursor-pointer">2</span><span class="px-2.5 py-1.5"><i class="fa-solid fa-angle-right"></i></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

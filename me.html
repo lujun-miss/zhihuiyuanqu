@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>09 个人中心 · 智慧园区</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="screen">
+  <div class="bg-gradient-to-br from-indigo-600 via-indigo-600 to-violet-500 text-white pb-16 flex-shrink-0">
+    <div class="statusbar text-white"><span>9:41</span><span class="space-x-1.5"><i class="fa-solid fa-signal text-xs"></i><i class="fa-solid fa-wifi text-xs"></i><i class="fa-solid fa-battery-three-quarters text-sm"></i></span></div>
+    <div class="navbar"><span>我的</span><i class="fa-solid fa-gear"></i></div>
+    <div class="px-5 mt-1 flex items-center gap-3.5">
+      <div class="w-14 h-14 rounded-2xl bg-white/15 flex items-center justify-center text-xl font-bold">晨</div>
+      <div>
+        <div class="flex items-center gap-2"><span class="text-lg font-bold">晨阳精密制造有限公司</span><span class="chip bg-emerald-400/90 text-white"><i class="fa-solid fa-certificate"></i>认证企业</span></div>
+        <div class="text-[11px] text-indigo-200 mt-1">138****8888 · 管理员：张工</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll hsb px-4 -mt-11 pb-4 relative z-10">
+    <!-- 统计 -->
+    <div class="card py-4 grid grid-cols-3 text-center">
+      <div><div class="text-lg font-bold">2</div><div class="text-[11px] text-slate-400 mt-0.5">我的合同</div></div>
+      <div class="border-x border-slate-100"><div class="text-lg font-bold text-rose-500">4</div><div class="text-[11px] text-slate-400 mt-0.5">待缴账单</div></div>
+      <div><div class="text-lg font-bold">3</div><div class="text-[11px] text-slate-400 mt-0.5">提交工单</div></div>
+    </div>
+    <!-- 菜单 -->
+    <div class="card mt-3 p-1.5">
+      <div class="px-3 pt-2.5 pb-1 text-[11px] text-slate-400">企业服务</div>
+      <a href="me.html" class="p-2.5 flex items-center gap-3"><div class="itile bg-indigo-50 text-indigo-500 itile-sm"><i class="fa-solid fa-building"></i></div><span class="flex-1 text-sm">企业信息</span><i class="fa-solid fa-angle-right text-slate-300"></i></a>
+      <a href="contract.html" class="p-2.5 flex items-center gap-3"><div class="itile bg-violet-50 text-violet-500 itile-sm"><i class="fa-solid fa-file-signature"></i></div><span class="flex-1 text-sm">我的合同</span><span class="chip bg-slate-100 text-slate-400">2 份</span><i class="fa-solid fa-angle-right text-slate-300"></i></a>
+      <a href="invoice.html" class="p-2.5 flex items-center gap-3"><div class="itile bg-rose-50 text-rose-500 itile-sm"><i class="fa-solid fa-file-invoice"></i></div><span class="flex-1 text-sm">发票管理</span><span class="chip bg-rose-50 text-rose-500">1 张可开</span><i class="fa-solid fa-angle-right text-slate-300"></i></a>
+    </div>
+    <div class="card mt-3 p-1.5">
+      <div class="px-3 pt-2.5 pb-1 text-[11px] text-slate-400">园区服务</div>
+      <a href="notice.html" class="p-2.5 flex items-center gap-3"><div class="itile bg-amber-50 text-amber-500 itile-sm"><i class="fa-solid fa-bullhorn"></i></div><span class="flex-1 text-sm">园区公告</span><span class="chip bg-rose-50 text-rose-500">2 条未读</span><i class="fa-solid fa-angle-right text-slate-300"></i></a>
+      <a href="repair.html" class="p-2.5 flex items-center gap-3"><div class="itile bg-orange-50 text-orange-500 itile-sm"><i class="fa-solid fa-screwdriver-wrench"></i></div><span class="flex-1 text-sm">我的工单</span><span class="chip bg-slate-100 text-slate-400">3 单</span><i class="fa-solid fa-angle-right text-slate-300"></i></a>
+      <a href="utility.html" class="p-2.5 flex items-center gap-3"><div class="itile bg-sky-50 text-sky-500 itile-sm"><i class="fa-solid fa-bolt"></i></div><span class="flex-1 text-sm">水电用量</span><i class="fa-solid fa-angle-right text-slate-300"></i></a>
+    </div>
+    <div class="card mt-3 p-1.5">
+      <div class="p-2.5 flex items-center gap-3"><div class="itile bg-amber-50 text-amber-500 itile-sm"><i class="fa-regular fa-bell"></i></div><span class="flex-1 text-sm">消息通知</span><i class="fa-solid fa-angle-right text-slate-300"></i></div>
+      <a href="tel:4008886666" class="p-2.5 flex items-center gap-3"><div class="itile bg-orange-50 text-orange-500 itile-sm"><i class="fa-solid fa-headset"></i></div><span class="flex-1 text-sm">联系客服</span><span class="text-xs text-slate-400">400-888-6666</span><i class="fa-solid fa-phone text-orange-400 text-sm"></i></a>
+      <div class="p-2.5 flex items-center gap-3"><div class="itile bg-slate-100 text-slate-500 itile-sm"><i class="fa-solid fa-gear"></i></div><span class="flex-1 text-sm">设置</span><i class="fa-solid fa-angle-right text-slate-300"></i></div>
+    </div>
+  </div>
+  <div class="tabbar">
+    <a class="t-item" href="home.html"><i class="fa-solid fa-house"></i>首页</a>
+    <a class="t-item" href="assets.html"><i class="fa-regular fa-building"></i>空间</a>
+    <a class="t-item" href="repair.html"><i class="fa-solid fa-screwdriver-wrench"></i>服务</a>
+    <a class="t-item active" href="me.html"><i class="fa-regular fa-user"></i>我的</a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>工单详情 · 智慧园区管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body class="web">
+  <aside class="sidebar">
+    <div class="s-logo"><div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm"><i class="fa-solid fa-industry"></i></div><div><div class="text-white font-bold text-[15px]">智汇·科创园</div><div class="text-[10px] text-slate-500 mt-0.5">园区运营管理端</div></div></div>
+    <nav class="mt-1">
+      <div class="s-cat">总览</div><a class="s-link" href="admin-dashboard.html"><i class="fa-solid fa-gauge-high"></i>运营驾驶舱</a>
+      <div class="s-cat">资产管理</div><a class="s-link" href="admin-space.html"><i class="fa-regular fa-building"></i>房源资产</a><a class="s-link" href="admin-contracts.html"><i class="fa-solid fa-file-signature"></i>合同中心</a>
+      <div class="s-cat">经营管理</div><a class="s-link" href="admin-billing.html"><i class="fa-solid fa-coins"></i>收租管理</a><a class="s-link" href="admin-meter-manage.html"><i class="fa-solid fa-bolt"></i>水电表管理</a><a class="s-link" href="admin-meter.html"><i class="fa-regular fa-clipboard"></i>抄表录入</a><a class="s-link" href="admin-invoice.html"><i class="fa-solid fa-file-invoice"></i>发票管理</a>
+      <div class="s-cat">服务管理</div><a class="s-link active" href="admin-workorder.html"><i class="fa-solid fa-clipboard-list"></i>工单管理</a><a class="s-link" href="admin-tenants.html"><i class="fa-solid fa-users"></i>企业档案</a><a class="s-link" href="admin-notice.html"><i class="fa-solid fa-bullhorn"></i>公告管理</a>
+    </nav>
+    <div class="s-foot"><i class="fa-regular fa-circle-question mr-1"></i>帮助中心 · v2.4.0</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <a href="admin-workorder.html" class="btn h-9 px-3.5 border border-slate-200 text-slate-600 text-xs rounded-lg"><i class="fa-solid fa-angle-left mr-1"></i>返回</a>
+      <div class="ml-4"><div class="font-bold text-[16px] text-slate-800">工单详情</div><div class="text-[11px] text-slate-400 mt-0.5">GD-20260901-03 · 紧急工单 · SLA 剩余 2 小时</div></div>
+      <div class="ml-auto flex items-center gap-2.5">
+        <a href="#" class="btn h-9 px-4 border border-slate-200 text-slate-600 text-xs rounded-lg"><i class="fa-solid fa-phone mr-1"></i>联系报修人</a>
+        <a href="admin-billing.html" class="btn h-9 px-4 bg-emerald-600 text-white text-xs rounded-lg"><i class="fa-solid fa-check mr-1"></i>完工验收</a>
+      </div>
+    </header>
+    <div class="content">
+      <!-- 工单头部 -->
+      <div class="wcard p-5 flex items-center gap-4">
+        <div class="w-14 h-14 rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center text-xl"><i class="fa-solid fa-fire"></i></div>
+        <div>
+          <div class="font-bold text-slate-800">车间中央空调故障停机</div>
+          <div class="text-xs text-slate-400 mt-1">A1栋 5F-501 · 星驰机器人 · SLA 4h · 截止 09-01 12:15</div>
+        </div>
+        <div class="ml-auto flex items-center gap-2">
+          <span class="chip bg-rose-50 text-rose-600 !text-xs">🔥 紧急</span>
+          <span class="chip bg-sky-50 text-sky-600 !text-sm !py-2 !px-4 font-semibold">处理中</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 gap-4 mt-4">
+        <div class="col-span-2 space-y-4">
+          <!-- 工单信息 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4">工单信息</div>
+            <div class="grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
+              <div><span class="text-slate-400 text-xs">工单编号</span><div class="font-medium mt-0.5">GD-20260901-03</div></div>
+              <div><span class="text-slate-400 text-xs">来源</span><div class="font-medium mt-0.5"><span class="chip bg-violet-50 text-violet-600 !text-[10px]">📱 租户小程序报修</span></div></div>
+              <div><span class="text-slate-400 text-xs">工单类型</span><div class="font-medium mt-0.5">空调暖通</div></div>
+              <div><span class="text-slate-400 text-xs">优先级</span><div class="font-medium mt-0.5 text-rose-500">🔥 紧急</div></div>
+              <div><span class="text-slate-400 text-xs">报修人</span><div class="font-medium mt-0.5">星驰机器人 · 李经理 138-8866-2856</div></div>
+              <div><span class="text-slate-400 text-xs">报修时间</span><div class="font-medium mt-0.5">09-01 08:15</div></div>
+            </div>
+            <div class="mt-4 p-3.5 rounded-lg bg-slate-50 text-sm text-slate-600"><span class="text-xs text-slate-400">故障描述</span><div class="mt-1.5">车间中央空调开机后不制冷，出风口只有自然风，已影响生产线正常运作，急需维修。</div></div>
+            <div class="mt-3 flex gap-2">
+              <div class="w-20 h-20 rounded-lg bg-slate-100 flex items-center justify-center text-slate-300"><i class="fa-regular fa-image text-2xl"></i></div>
+              <div class="w-20 h-20 rounded-lg bg-slate-100 flex items-center justify-center text-slate-300"><i class="fa-regular fa-image text-2xl"></i></div>
+            </div>
+          </div>
+          <!-- 处理进度时间线 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4">处理进度</div>
+            <div class="space-y-0">
+              <!-- ① 提交 -->
+              <div class="flex gap-3 pb-4 border-l-2 border-emerald-400 ml-2 pl-4 relative">
+                <div class="absolute -left-[7px] w-3 h-3 rounded-full bg-emerald-400 border-2 border-white"></div>
+                <div><div class="text-xs text-slate-400">① 提交</div><div class="text-sm mt-0.5">租户通过小程序提交报修</div><div class="text-[11px] text-slate-400 mt-1">09-01 08:15</div></div>
+              </div>
+              <!-- ② 接单·派单 -->
+              <div class="flex gap-3 pb-4 border-l-2 border-emerald-400 ml-2 pl-4 relative">
+                <div class="absolute -left-[7px] w-3 h-3 rounded-full bg-emerald-400 border-2 border-white"></div>
+                <div><div class="text-xs text-slate-400">② 接单 · 派单</div><div class="text-sm mt-0.5">运营方接单 → 派给暖通组 王工</div><div class="text-[11px] text-slate-400 mt-1">09-01 08:30 · 响应 15 分钟</div></div>
+              </div>
+              <!-- ③ 处理 -->
+              <div class="flex gap-3 pb-4 border-l-2 border-amber-400 ml-2 pl-4 relative">
+                <div class="absolute -left-[7px] w-3 h-3 rounded-full bg-amber-400 border-2 border-white ring-4 ring-amber-100"></div>
+                <div><div class="text-xs text-amber-500 font-medium">③ 处理中</div><div class="text-sm mt-0.5 text-amber-500">王工已到场 · 初步判断压缩机故障，备件调拨中</div><div class="text-[11px] text-slate-400 mt-1">09-01 10:12 · 已到场</div></div>
+              </div>
+              <!-- ④ 完工·验收 -->
+              <div class="flex gap-3 pb-4 border-l-2 border-slate-200 ml-2 pl-4 relative">
+                <div class="absolute -left-[7px] w-3 h-3 rounded-full bg-slate-200 border-2 border-white"></div>
+                <div><div class="text-xs text-slate-400">④ 完工 · 验收</div><div class="text-sm mt-0.5 text-slate-400">待维修员完工提交</div></div>
+              </div>
+              <!-- ⑤ 评价·归档 -->
+              <div class="flex gap-3 ml-2 pl-4 relative">
+                <div class="absolute -left-[7px] w-3 h-3 rounded-full bg-slate-200 border-2 border-white"></div>
+                <div><div class="text-xs text-slate-400">⑤ 评价 · 归档</div><div class="text-sm mt-0.5 text-slate-400">待租户评价后归档</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <!-- 派单信息 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-4">派单信息</div>
+            <div class="space-y-3 text-sm">
+              <div><span class="text-slate-400 text-xs">维修班组</span><div class="font-medium mt-0.5">暖通维修组</div></div>
+              <div><span class="text-slate-400 text-xs">指派人</span><div class="font-medium mt-0.5">王工 159-2233-4456</div></div>
+              <div><span class="text-slate-400 text-xs">到场时间</span><div class="font-medium mt-0.5">09-01 10:12</div></div>
+              <div><span class="text-slate-400 text-xs">预计完工</span><div class="font-medium mt-0.5">09-01 16:00</div></div>
+            </div>
+            <div class="mt-4 p-3 rounded-lg bg-indigo-50/50 text-xs text-slate-500"><i class="fa-solid fa-circle-info text-indigo-400 mr-1"></i>SLA 响应 15 分钟，远低于 4 小时限值。</div>
+          </div>
+          <!-- 费用预估 -->
+          <div class="wcard p-5">
+            <div class="font-bold text-slate-800 text-sm mb-3">费用预估</div>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between"><span class="text-slate-400">人工费</span><span class="font-medium">¥480</span></div>
+              <div class="flex justify-between"><span class="text-slate-400">配件费（压缩机）</span><span class="font-medium">¥2,200</span></div>
+              <div class="flex justify-between border-t border-slate-100 pt-2"><span class="font-bold">合计</span><span class="font-bold text-indigo-600">¥2,680</span></div>
+            </div>
+            <div class="text-[11px] text-slate-400 mt-2"><a href="admin-billing.html" class="text-indigo-500">→ 计入企业当月账单</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

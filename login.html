@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>01 登录 · 智慧园区</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="screen bg-gradient-to-b from-indigo-600 via-indigo-600 to-indigo-900 text-white">
+  <div class="statusbar text-white"><span>9:41</span><span class="space-x-1.5"><i class="fa-solid fa-signal text-xs"></i><i class="fa-solid fa-wifi text-xs"></i><i class="fa-solid fa-battery-three-quarters text-sm"></i></span></div>
+  <div class="flex-1 flex flex-col px-7 pt-12">
+    <div class="w-16 h-16 rounded-2xl bg-white/15 flex items-center justify-center text-2xl"><i class="fa-solid fa-industry"></i></div>
+    <div class="mt-5 text-2xl font-bold">智汇·科创园</div>
+    <div class="mt-1 text-sm text-indigo-200">智慧园区企业服务平台</div>
+    <div class="mt-10 text-slate-900">
+      <div class="field bg-white/95 border-transparent"><i class="fa-solid fa-mobile-screen text-slate-400"></i><input placeholder="请输入手机号" value="138 0000 8888"></div>
+      <div class="field bg-white/95 border-transparent mt-3"><i class="fa-solid fa-shield-halved text-slate-400"></i><input placeholder="请输入验证码"><span class="text-indigo-600 font-semibold text-xs whitespace-nowrap">获取验证码</span></div>
+      <a href="home.html" class="btn bg-white text-indigo-600 mt-5 shadow-lg shadow-indigo-900/30">登录 / 注册</a>
+      <div class="flex items-center gap-3 my-7 text-white/50 text-xs"><div class="h-px bg-white/20 flex-1"></div>其他登录方式<div class="h-px bg-white/20 flex-1"></div></div>
+      <div class="flex flex-col items-center">
+        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-2xl text-[#07c160]"><i class="fa-brands fa-weixin"></i></div>
+        <div class="text-white/60 text-xs mt-2">微信一键登录</div>
+      </div>
+    </div>
+    <div class="mt-auto pb-8 flex items-start gap-2 text-[11px] text-indigo-200 justify-center">
+      <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
+      <p class="leading-relaxed">已阅读并同意《用户服务协议》和《隐私政策》</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

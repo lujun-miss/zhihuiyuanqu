@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>工单详情 · 维修端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="screen">
+  <div class="statusbar"><span>9:41</span><span class="space-x-1.5"><i class="fa-solid fa-signal text-xs"></i><i class="fa-solid fa-wifi text-xs"></i><i class="fa-solid fa-battery-three-quarters text-sm"></i></span></div>
+  <div class="navbar bg-white">
+    <a href="repair-home.html" class="pl-2"><i class="fa-solid fa-angle-left"></i></a>
+    <span>工单详情</span>
+    <span class="text-xs font-normal text-slate-400">GD-20260901-03</span>
+  </div>
+  <div class="scroll hsb px-4 pb-4">
+    <!-- 工单状态 -->
+    <div class="card p-3.5 mt-3.5">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center"><i class="fa-solid fa-fire"></i></div>
+        <div class="flex-1"><div class="font-bold text-slate-800 text-sm">车间中央空调故障停机</div><div class="text-[11px] text-slate-400 mt-0.5">🔥 紧急 · SLA 截止 09-01 12:15</div></div>
+        <span class="chip bg-amber-50 text-amber-600 !text-xs">待接单</span>
+      </div>
+      <div class="mt-2.5 p-2.5 rounded-lg bg-rose-50/50 text-[11px] text-rose-600"><i class="fa-solid fa-triangle-exclamation mr-1"></i>距 SLA 截止仅剩 2h 15m，请尽快接单</div>
+    </div>
+    <!-- 工单信息 -->
+    <div class="card p-3.5 mt-3">
+      <div class="text-xs font-bold text-slate-800 mb-3">工单信息</div>
+      <div class="space-y-2.5 text-xs">
+        <div class="flex justify-between"><span class="text-slate-400">来源</span><span class="text-slate-700">📱 租户小程序报修</span></div>
+        <div class="flex justify-between"><span class="text-slate-400">类型</span><span class="text-slate-700">空调暖通</span></div>
+        <div class="flex justify-between"><span class="text-slate-400">报修位置</span><span class="text-slate-700">A1栋 5F-501</span></div>
+        <div class="flex justify-between"><span class="text-slate-400">承租企业</span><span class="text-slate-700">星驰机器人</span></div>
+        <div class="flex justify-between"><span class="text-slate-400">联系人</span><span class="text-slate-700">李经理 138-8866-2856</span></div>
+        <div class="flex justify-between"><span class="text-slate-400">提交时间</span><span class="text-slate-700">09-01 08:15</span></div>
+        <div class="flex justify-between"><span class="text-slate-400">派单时间</span><span class="text-slate-700">09-01 08:30</span></div>
+      </div>
+      <div class="mt-3 p-2.5 rounded-lg bg-slate-50 text-xs text-slate-600"><span class="text-slate-400">问题描述</span><div class="mt-1">车间中央空调开机后不制冷，出风口只有自然风，已影响生产线正常运作，急需维修。</div></div>
+      <div class="mt-2 flex gap-2"><div class="w-16 h-16 rounded-lg bg-slate-100 flex items-center justify-center text-slate-300"><i class="fa-regular fa-image text-lg"></i></div><div class="w-16 h-16 rounded-lg bg-slate-100 flex items-center justify-center text-slate-300"><i class="fa-regular fa-image text-lg"></i></div></div>
+    </div>
+    <!-- 派单信息 -->
+    <div class="card p-3.5 mt-3">
+      <div class="text-xs font-bold text-slate-800 mb-3">派单信息</div>
+      <div class="space-y-2.5 text-xs">
+        <div class="flex justify-between"><span class="text-slate-400">维修班组</span><span class="text-slate-700">暖通维修组</span></div>
+        <div class="flex justify-between"><span class="text-slate-400">指派人</span><span class="text-slate-700">王工（我）</span></div>
+        <div class="flex justify-between"><span class="text-slate-400">要求完成</span><span class="text-slate-700">09-01 16:00</span></div>
+      </div>
+      <div class="mt-2.5 p-2.5 rounded-lg bg-indigo-50/50 text-[11px] text-slate-500">派单备注：请携带压缩机备件，入场需佩戴安全帽，联系李经理开门。</div>
+    </div>
+    <!-- 流转进度 -->
+    <div class="card p-3.5 mt-3">
+      <div class="text-xs font-bold text-slate-800 mb-3">流转进度</div>
+      <div class="space-y-0">
+        <div class="flex gap-2.5 pb-2.5 border-l-2 border-emerald-400 ml-1.5 pl-3 relative"><div class="absolute -left-[5px] w-2.5 h-2.5 rounded-full bg-emerald-400 border border-white"></div><div class="text-[11px] text-slate-400">① 提交</div><div class="text-[11px] text-slate-400">09-01 08:15</div></div>
+        <div class="flex gap-2.5 pb-2.5 border-l-2 border-emerald-400 ml-1.5 pl-3 relative"><div class="absolute -left-[5px] w-2.5 h-2.5 rounded-full bg-emerald-400 border border-white"></div><div class="text-[11px] text-slate-400">② 派单</div><div class="text-[11px] text-slate-400">09-01 08:30</div></div>
+        <div class="flex gap-2.5 pb-2.5 border-l-2 border-amber-400 ml-1.5 pl-3 relative"><div class="absolute -left-[5px] w-2.5 h-2.5 rounded-full bg-amber-400 border border-white ring-2 ring-amber-100"></div><div class="text-[11px] text-amber-500 font-medium">③ 接单 ← 当前</div><div class="text-[11px] text-slate-400">待接单</div></div>
+        <div class="flex gap-2.5 border-l-2 border-slate-200 ml-1.5 pl-3 relative"><div class="absolute -left-[5px] w-2.5 h-2.5 rounded-full bg-slate-200 border border-white"></div><div class="text-[11px] text-slate-400">④ 处理</div></div>
+      </div>
+    </div>
+    <!-- 接单按钮 -->
+    <a href="repair-home.html" class="btn h-12 w-full mt-4 bg-indigo-600 text-white text-sm rounded-xl flex items-center justify-center gap-2"><i class="fa-solid fa-hand-holding"></i>立即接单</a>
+    <a href="#" class="btn h-10 w-full mt-2 border border-slate-200 text-slate-600 text-xs rounded-lg flex items-center justify-center gap-1.5"><i class="fa-solid fa-phone"></i>联系报修人 · 李经理</a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>03 园区空间 · 智慧园区</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="screen">
+  <div class="bg-gradient-to-br from-indigo-600 via-indigo-600 to-violet-500 text-white flex-shrink-0">
+    <div class="statusbar text-white"><span>9:41</span><span class="space-x-1.5"><i class="fa-solid fa-signal text-xs"></i><i class="fa-solid fa-wifi text-xs"></i><i class="fa-solid fa-battery-three-quarters text-sm"></i></span></div>
+    <div class="navbar"><span>园区空间</span><span class="text-xs font-normal text-indigo-200">在租 86 家 · 空置 7 套</span></div>
+    <div class="mx-4 mb-3 h-10 rounded-xl bg-white/15 flex items-center px-4 gap-2 text-indigo-100 text-sm"><i class="fa-solid fa-magnifying-glass text-xs"></i>搜索楼宇、面积、价格…</div>
+  </div>
+  <div class="scroll hsb pb-4">
+    <!-- 筛选 -->
+    <div class="flex gap-2 px-4 py-3 bg-white sticky top-0 z-10 shadow-sm">
+      <span class="chip bg-indigo-600 text-white !text-xs !py-2 !px-3.5">全部</span>
+      <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">厂房</span>
+      <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">研发楼</span>
+      <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5">仓库</span>
+      <span class="chip bg-slate-100 text-slate-500 !text-xs !py-2 !px-3.5 ml-auto"><i class="fa-solid fa-sliders"></i> 筛选</span>
+    </div>
+    <div class="px-4">
+      <!-- 主推房源 -->
+      <div class="card overflow-hidden mt-1">
+        <div class="h-40 relative">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=750&q=80" class="w-full h-full object-cover" alt="A1栋">
+          <span class="chip bg-indigo-600 text-white absolute top-3 left-3">热招推荐</span>
+          <span class="chip bg-white/90 text-slate-700 absolute top-3 right-3"><i class="fa-solid fa-location-dot text-rose-500"></i> 园区东侧</span>
+          <div class="absolute bottom-3 left-3 text-white">
+            <div class="text-base font-bold">A1栋 · 研发办公楼</div>
+            <div class="text-[11px] text-white/80 mt-0.5">120-2,000㎡ 可分割 · 层高 4.2m</div>
+          </div>
+        </div>
+        <div class="p-3.5 flex items-center justify-between">
+          <div><span class="text-indigo-600 font-bold text-lg">¥55</span><span class="text-xs text-slate-400">/㎡/月 起</span><div class="text-[11px] text-slate-400 mt-0.5">精装交付 · 电梯 4 部 · 入驻率 89%</div></div>
+          <a href="tel:4008886666" class="btn h-9 px-4 bg-indigo-600 text-white text-xs rounded-full flex items-center gap-1.5"><i class="fa-solid fa-phone"></i>联系招商</a>
+        </div>
+      </div>
+      <!-- 房源列表 -->
+      <div class="card p-3.5 mt-3 flex gap-3">
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=300&q=80" class="w-24 h-20 rounded-xl object-cover" alt="A3栋">
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-bold">A3栋 · 智能厂房</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">800-1,200㎡ · 层高 8m · 带行吊</div>
+          <div class="flex gap-1.5 mt-1.5"><span class="chip bg-indigo-50 text-indigo-500">可分割</span><span class="chip bg-indigo-50 text-indigo-500">独立电表</span></div>
+          <div class="mt-1.5"><span class="text-indigo-600 font-bold">¥38</span><span class="text-xs text-slate-400">/㎡/月</span></div>
+        </div>
+      </div>
+      <div class="card p-3.5 mt-3 flex gap-3">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=300&q=80" class="w-24 h-20 rounded-xl object-cover" alt="B2栋">
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-bold">B2栋 · 仓储物流中心</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">1,800-2,400㎡ · 净高 9m · 月台 6 个</div>
+          <div class="flex gap-1.5 mt-1.5"><span class="chip bg-indigo-50 text-indigo-500">消防丙二类</span><span class="chip bg-indigo-50 text-indigo-500">可办证</span></div>
+          <div class="mt-1.5"><span class="text-indigo-600 font-bold">¥22</span><span class="text-xs text-slate-400">/㎡/月</span></div>
+        </div>
+      </div>
+      <!-- 配套设施 -->
+      <div class="card p-4 mt-3">
+        <div class="font-bold text-[15px]">园区配套</div>
+        <div class="grid grid-cols-4 gap-y-4 mt-3 text-center">
+          <div><div class="itile-sm itile mx-auto bg-emerald-50 text-emerald-500"><i class="fa-solid fa-utensils"></i></div><div class="text-[11px] mt-1 text-slate-500">员工餐厅</div></div>
+          <div><div class="itile-sm itile mx-auto bg-sky-50 text-sky-500"><i class="fa-solid fa-bus"></i></div><div class="text-[11px] mt-1 text-slate-500">通勤班车</div></div>
+          <div><div class="itile-sm itile mx-auto bg-amber-50 text-amber-500"><i class="fa-solid fa-charging-station"></i></div><div class="text-[11px] mt-1 text-slate-500">充电桩</div></div>
+          <div><div class="itile-sm itile mx-auto bg-violet-50 text-violet-500"><i class="fa-solid fa-people-roof"></i></div><div class="text-[11px] mt-1 text-slate-500">会议中心</div></div>
+        </div>
+      </div>
+      <div class="text-center text-[11px] text-slate-400 mt-4">招商热线 400-888-6666 · 智汇园区运营中心</div>
+    </div>
+  </div>
+  <div class="tabbar">
+    <a class="t-item" href="home.html"><i class="fa-solid fa-house"></i>首页</a>
+    <a class="t-item active" href="assets.html"><i class="fa-regular fa-building"></i>空间</a>
+    <a class="t-item" href="repair.html"><i class="fa-solid fa-screwdriver-wrench"></i>服务</a>
+    <a class="t-item" href="me.html"><i class="fa-regular fa-user"></i>我的</a>
+  </div>
+</div>
+</body>
+</html>
